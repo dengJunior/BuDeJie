@@ -76,7 +76,23 @@
 }
 
 #pragma mark -
-#pragma mark view life cycle
+#pragma mark 生命周期
++ (void)load {
+    // 设置tabBar上按钮的文字格式
+    // 普通
+    NSMutableDictionary *attrNor = [NSMutableDictionary dictionary];
+    attrNor[NSForegroundColorAttributeName] = [UIColor grayColor];
+    
+    // 选中
+    NSMutableDictionary *attrSel = [NSMutableDictionary dictionary];
+    attrSel[NSForegroundColorAttributeName] = [UIColor blackColor];
+    
+    // 设置属性的全局效果
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:attrNor forState:UIControlStateNormal];
+    [item setTitleTextAttributes:attrSel forState:UIControlStateSelected];
+}
+
 - (void)viewDidLoad {
     
     [self setupChildControllors];
