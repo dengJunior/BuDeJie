@@ -13,6 +13,8 @@
 #import "JKFriendTrendNVC.h"
 #import "JKMeNVC.h"
 
+#import "UIImage+JKRendering.h"
+
 @implementation JKTabBarC
 
 #pragma mark -
@@ -46,30 +48,30 @@
     JKHomeNVC *homeNvc = self.childViewControllers[0];
     homeNvc.tabBarItem.title = @"首页";
     homeNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    homeNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
+    homeNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 新帖 按钮
     JKNewNVC *newNvc = self.childViewControllers[1];
     newNvc.tabBarItem.title = @"新帖";
     newNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    newNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
+    newNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 发布 按钮
     JKPublishVC *publishNvc = self.childViewControllers[2];
     publishNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon"];
-    publishNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_publish_click_icon"];
+    publishNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_publish_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 关注 按钮
     JKFriendTrendNVC *friendTrendNvc = self.childViewControllers[3];
     friendTrendNvc.tabBarItem.title = @"关注";
     friendTrendNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    friendTrendNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
+    friendTrendNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 我 按钮
     JKMeNVC *meNvc = self.childViewControllers[4];
     meNvc.tabBarItem.title = @"我";
     meNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    meNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
+    meNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
 }
 
