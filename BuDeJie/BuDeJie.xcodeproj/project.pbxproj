@@ -11,6 +11,13 @@
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
 		F3C9FEB71D2E709A004BF32E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */; };
+		F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FED91D2E806A004BF32E /* JKTabBarC.m */; };
+		F3C9FEDD1D2E80E1004BF32E /* JKHomeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEDC1D2E80E1004BF32E /* JKHomeNVC.m */; };
+		F3C9FEE01D2E8107004BF32E /* JKNewNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEDF1D2E8107004BF32E /* JKNewNVC.m */; };
+		F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEE21D2E813C004BF32E /* JKPublishVC.m */; };
+		F3C9FEE61D2E8174004BF32E /* JKFriendTrendNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEE51D2E8174004BF32E /* JKFriendTrendNVC.m */; };
+		F3C9FEE91D2E818A004BF32E /* JKMeNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEE81D2E818A004BF32E /* JKMeNVC.m */; };
+		F3C9FEF01D2E8C19004BF32E /* UIImage+JKRending.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEEF1D2E8C19004BF32E /* UIImage+JKRending.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,20 @@
 		F3C9FEB31D2E709A004BF32E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3C9FEB61D2E709A004BF32E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3C9FEB81D2E709A004BF32E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C9FED81D2E806A004BF32E /* JKTabBarC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTabBarC.h; sourceTree = "<group>"; };
+		F3C9FED91D2E806A004BF32E /* JKTabBarC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTabBarC.m; sourceTree = "<group>"; };
+		F3C9FEDB1D2E80E1004BF32E /* JKHomeNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKHomeNVC.h; sourceTree = "<group>"; };
+		F3C9FEDC1D2E80E1004BF32E /* JKHomeNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKHomeNVC.m; sourceTree = "<group>"; };
+		F3C9FEDE1D2E8107004BF32E /* JKNewNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNewNVC.h; sourceTree = "<group>"; };
+		F3C9FEDF1D2E8107004BF32E /* JKNewNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKNewNVC.m; sourceTree = "<group>"; };
+		F3C9FEE11D2E813C004BF32E /* JKPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPublishVC.h; sourceTree = "<group>"; };
+		F3C9FEE21D2E813C004BF32E /* JKPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPublishVC.m; sourceTree = "<group>"; };
+		F3C9FEE41D2E8174004BF32E /* JKFriendTrendNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKFriendTrendNVC.h; sourceTree = "<group>"; };
+		F3C9FEE51D2E8174004BF32E /* JKFriendTrendNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKFriendTrendNVC.m; sourceTree = "<group>"; };
+		F3C9FEE71D2E818A004BF32E /* JKMeNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMeNVC.h; sourceTree = "<group>"; };
+		F3C9FEE81D2E818A004BF32E /* JKMeNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMeNVC.m; sourceTree = "<group>"; };
+		F3C9FEEE1D2E8C19004BF32E /* UIImage+JKRending.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKRending.h"; sourceTree = "<group>"; };
+		F3C9FEEF1D2E8C19004BF32E /* UIImage+JKRending.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKRending.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +74,9 @@
 		F3C9FEA61D2E709A004BF32E /* BuDeJie */ = {
 			isa = PBXGroup;
 			children = (
-				F3C9FEBE1D2E7CBD004BF32E /* Classes */,
 				F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */,
 				F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */,
+				F3C9FEBE1D2E7CBD004BF32E /* Classes */,
 				F3C9FEB31D2E709A004BF32E /* Assets.xcassets */,
 				F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */,
 				F3C9FEB81D2E709A004BF32E /* Info.plist */,
@@ -99,6 +120,8 @@
 		F3C9FEC01D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEE41D2E8174004BF32E /* JKFriendTrendNVC.h */,
+				F3C9FEE51D2E8174004BF32E /* JKFriendTrendNVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +153,8 @@
 		F3C9FEC41D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEDB1D2E80E1004BF32E /* JKHomeNVC.h */,
+				F3C9FEDC1D2E80E1004BF32E /* JKHomeNVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +186,8 @@
 		F3C9FEC81D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FED81D2E806A004BF32E /* JKTabBarC.h */,
+				F3C9FED91D2E806A004BF32E /* JKTabBarC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +219,8 @@
 		F3C9FECC1D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEE71D2E818A004BF32E /* JKMeNVC.h */,
+				F3C9FEE81D2E818A004BF32E /* JKMeNVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +252,8 @@
 		F3C9FED01D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEDE1D2E8107004BF32E /* JKNewNVC.h */,
+				F3C9FEDF1D2E8107004BF32E /* JKNewNVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,6 +285,8 @@
 		F3C9FED41D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEE11D2E813C004BF32E /* JKPublishVC.h */,
+				F3C9FEE21D2E813C004BF32E /* JKPublishVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,8 +308,18 @@
 		F3C9FED71D2E7D3B004BF32E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEED1D2E8BB5004BF32E /* category */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		F3C9FEED1D2E8BB5004BF32E /* category */ = {
+			isa = PBXGroup;
+			children = (
+				F3C9FEEE1D2E8C19004BF32E /* UIImage+JKRending.h */,
+				F3C9FEEF1D2E8C19004BF32E /* UIImage+JKRending.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +348,7 @@
 		F3C9FE9C1D2E709A004BF32E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JK;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Joker;
 				TargetAttributes = {
@@ -350,7 +394,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */,
+				F3C9FEE61D2E8174004BF32E /* JKFriendTrendNVC.m in Sources */,
+				F3C9FEE91D2E818A004BF32E /* JKMeNVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
+				F3C9FEE01D2E8107004BF32E /* JKNewNVC.m in Sources */,
+				F3C9FEF01D2E8C19004BF32E /* UIImage+JKRending.m in Sources */,
+				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
+				F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */,
+				F3C9FEDD1D2E80E1004BF32E /* JKHomeNVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
