@@ -12,8 +12,7 @@
 #import "JKPublishVC.h"
 #import "JKFriendTrendNVC.h"
 #import "JKMeNVC.h"
-
-#import "UIImage+JKRendering.h"
+#import "JKTabBar.h"
 
 @implementation JKTabBarC
 
@@ -56,19 +55,23 @@
     newNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
     newNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
+    /*
     // 设置tabBar上的 发布 按钮
     JKPublishVC *publishNvc = self.childViewControllers[2];
-    publishNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon"];
+    publishNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     publishNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_publish_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    // tabBarItem的按钮只有两种状态 -> 普通和选中，但是这里我们需要一个高亮状态 
+    // 用系统的tabBarItem不能满足要求
+    */
     
     // 设置tabBar上的 关注 按钮
-    JKFriendTrendNVC *friendTrendNvc = self.childViewControllers[3];
+    JKFriendTrendNVC *friendTrendNvc = self.childViewControllers[2];
     friendTrendNvc.tabBarItem.title = @"关注";
     friendTrendNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
     friendTrendNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 我 按钮
-    JKMeNVC *meNvc = self.childViewControllers[4];
+    JKMeNVC *meNvc = self.childViewControllers[3];
     meNvc.tabBarItem.title = @"我";
     meNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
     meNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
@@ -82,6 +85,7 @@
     // 普通
     NSMutableDictionary *attrNor = [NSMutableDictionary dictionary];
     attrNor[NSForegroundColorAttributeName] = [UIColor grayColor];
+    attrNor[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     
     // 选中
     NSMutableDictionary *attrSel = [NSMutableDictionary dictionary];
@@ -98,6 +102,11 @@
     [self setupChildControllors];
     
     [self setupTabBarItems];
+    // 将tabBarController的tabBar替换成我自定义的样式
+    JKTabBar *tabBar = [[JKTabBar alloc] init];
+    // tabBar是只读属性，所以要用 KVC 修改
+    [self setValue:tabBar forKeyPath:@"tabBar"];
+    
 }
 
 
