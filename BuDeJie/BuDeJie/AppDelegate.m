@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JKTabBarC.h"
+#import "JKAdVC.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +20,9 @@
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
-    
-    JKTabBarC *tabBarC = [[JKTabBarC alloc] init];
-    self.window.rootViewController = tabBarC;
+
+    JKAdVC *adVc = [[JKAdVC alloc] init];
+    self.window.rootViewController = adVc;
     
     [self.window makeKeyAndVisible];
     
