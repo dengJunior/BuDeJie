@@ -7,11 +7,11 @@
 //
 
 #import "JKTabBarC.h"
-#import "JKHomeNVC.h"
-#import "JKNewNVC.h"
+#import "JKHomeVC.h"
+#import "JKNewVC.h"
 #import "JKPublishVC.h"
-#import "JKFriendTrendNVC.h"
-#import "JKMeNVC.h"
+#import "JKFriendTrendVC.h"
+#import "JKMeTVC.h"
 #import "JKTabBar.h"
 
 @implementation JKTabBarC
@@ -21,60 +21,64 @@
 - (void)setupChildControllors {
     
     // 添加 首页页面 控制器
-    JKHomeNVC *homeNvc = [[JKHomeNVC alloc] init];
+    JKHomeVC *homeVC = [[JKHomeVC alloc] init];
+    UINavigationController *homeNvc = [[UINavigationController alloc] initWithRootViewController:homeVC];
     [self addChildViewController:homeNvc];
     
     // 添加 新帖页面 控制器
-    JKNewNVC *newNvc = [[JKNewNVC alloc] init];
+    JKNewVC *newVC = [[JKNewVC alloc] init];
+    UINavigationController *newNvc = [[UINavigationController alloc] initWithRootViewController:newVC];
     [self addChildViewController:newNvc];
     
     // 添加 发布页面 控制器
-    JKPublishVC *publishVc = [[JKPublishVC alloc] init];
-    [self addChildViewController:publishVc];
+//    JKPublishVC *publishVc = [[JKPublishVC alloc] init];
+//    [self addChildViewController:publishVc];
     
     // 添加 关注页面 控制器
-    JKFriendTrendNVC *friendTrendNvc = [[JKFriendTrendNVC alloc] init];
+    JKFriendTrendVC *friendTrendVC = [[JKFriendTrendVC alloc] init];
+    UINavigationController *friendTrendNvc = [[UINavigationController alloc] initWithRootViewController:friendTrendVC];
     [self addChildViewController:friendTrendNvc];
     
     // 添加 我页面 控制器
-    JKMeNVC *meNvc = [[JKMeNVC alloc] init];
+    JKMeTVC *meVC = [[JKMeTVC alloc] init];
+    UINavigationController *meNvc = [[UINavigationController alloc] initWithRootViewController:meVC];
     [self addChildViewController:meNvc];
 }
 
 - (void)setupTabBarItems {
     
     // 设置tabBar上的 首页 按钮
-    JKHomeNVC *homeNvc = self.childViewControllers[0];
-    homeNvc.tabBarItem.title = @"首页";
-    homeNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    homeNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    JKHomeVC *homeVC = self.childViewControllers[0];
+    homeVC.tabBarItem.title = @"首页";
+    homeVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
+    homeVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 新帖 按钮
-    JKNewNVC *newNvc = self.childViewControllers[1];
-    newNvc.tabBarItem.title = @"新帖";
-    newNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    newNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    JKNewVC *newVC = self.childViewControllers[1];
+    newVC.tabBarItem.title = @"新帖";
+    newVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
+    newVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     /*
     // 设置tabBar上的 发布 按钮
-    JKPublishVC *publishNvc = self.childViewControllers[2];
-    publishNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
-    publishNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_publish_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    JKPublishVC *publishVC = self.childViewControllers[2];
+    publishVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    publishVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_publish_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     // tabBarItem的按钮只有两种状态 -> 普通和选中，但是这里我们需要一个高亮状态 
     // 用系统的tabBarItem不能满足要求
     */
     
     // 设置tabBar上的 关注 按钮
-    JKFriendTrendNVC *friendTrendNvc = self.childViewControllers[2];
-    friendTrendNvc.tabBarItem.title = @"关注";
-    friendTrendNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    friendTrendNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    JKFriendTrendVC *friendTrendVC = self.childViewControllers[2];
+    friendTrendVC.tabBarItem.title = @"关注";
+    friendTrendVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
+    friendTrendVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 我 按钮
-    JKMeNVC *meNvc = self.childViewControllers[3];
-    meNvc.tabBarItem.title = @"我";
-    meNvc.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    meNvc.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    JKMeTVC *meVC = self.childViewControllers[3];
+    meVC.tabBarItem.title = @"我";
+    meVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
+    meVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
 }
 

@@ -1,18 +1,18 @@
 //
-//  JKMeNVC.m
+//  JKNewVC.m
 //  BuDeJie
 //
 //  Created by Joker on 16/7/7.
 //  Copyright © 2016年 Joker. All rights reserved.
 //
 
-#import "JKMeNVC.h"
+#import "JKNewVC.h"
 
-@implementation JKMeNVC
+@implementation JKNewVC
 
 - (void)viewDidLoad {
     
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 @end

@@ -11,6 +11,8 @@
 
 #import "UIImage+JKRendering.h"
 
+#import "UIBarButtonItem+JKItem.h"
+
 
 #define screenW [UIScreen mainScreen].bounds.size.width
 

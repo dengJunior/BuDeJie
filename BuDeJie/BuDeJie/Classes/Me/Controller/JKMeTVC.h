@@ -1,5 +1,5 @@
 //
-//  JKHomeNVC.h
+//  JKMeTVC.h
 //  BuDeJie
 //
 //  Created by Joker on 16/7/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JKHomeNVC : UINavigationController
+@interface JKMeTVC : UITableViewController
 
 @end

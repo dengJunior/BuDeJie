@@ -1,5 +1,5 @@
 //
-//  JKMeNVC.h
+//  JKNewVC.h
 //  BuDeJie
 //
 //  Created by Joker on 16/7/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JKMeNVC : UINavigationController
+@interface JKNewVC : UIViewController
 
 @end

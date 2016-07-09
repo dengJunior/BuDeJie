@@ -1,5 +1,5 @@
 //
-//  JKFriendTrendNVC.h
+//  JKHomeVC.h
 //  BuDeJie
 //
 //  Created by Joker on 16/7/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JKFriendTrendNVC : UINavigationController
+@interface JKHomeVC : UIViewController
 
 @end
