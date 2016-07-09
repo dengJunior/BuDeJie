@@ -24,4 +24,17 @@
     
 }
 
++ (UIBarButtonItem *)itemWithImage:(UIImage *)image selectedImage:(UIImage *)selImage target:(id)target action:(SEL)action {
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:image forState:UIControlStateNormal];
+    [btn setImage:selImage forState:UIControlStateSelected];
+    
+    [btn sizeToFit];
+    
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
+
 @end

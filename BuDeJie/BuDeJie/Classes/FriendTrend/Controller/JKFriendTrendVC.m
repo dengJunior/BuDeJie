@@ -13,6 +13,21 @@
 - (void)viewDidLoad {
     
     self.view.backgroundColor = [UIColor magentaColor];
+    
+    [self setupNavigationItems];
+}
+
+- (void)setupNavigationItems {
+    
+    self.navigationItem.title = @"我的关注";
+    
+    UIBarButtonItem *leftBar = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highlightedImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(friendsRecomment)];
+    self.navigationItem.leftBarButtonItem = leftBar;
+    
+}
+
+- (void)friendsRecomment {
+    
 }
 
 @end

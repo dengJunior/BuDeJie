@@ -24,4 +24,6 @@
  */
 + (UIBarButtonItem *)itemWithImage:(UIImage *)image highlightedImage:(UIImage *)hlImage target:(id)target action:(SEL)action;
 
++ (UIBarButtonItem *)itemWithImage:(UIImage *)image selectedImage:(UIImage *)selImage target:(id)target action:(SEL)action;
+
 @end

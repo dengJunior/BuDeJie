@@ -12,6 +12,8 @@
 #import "JKPublishVC.h"
 #import "JKFriendTrendVC.h"
 #import "JKMeTVC.h"
+#import "JKNavigationController.h"
+
 #import "JKTabBar.h"
 
 @implementation JKTabBarC
@@ -22,12 +24,12 @@
     
     // 添加 首页页面 控制器
     JKHomeVC *homeVC = [[JKHomeVC alloc] init];
-    UINavigationController *homeNvc = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    JKNavigationController *homeNvc = [[JKNavigationController alloc] initWithRootViewController:homeVC];
     [self addChildViewController:homeNvc];
     
     // 添加 新帖页面 控制器
     JKNewVC *newVC = [[JKNewVC alloc] init];
-    UINavigationController *newNvc = [[UINavigationController alloc] initWithRootViewController:newVC];
+    JKNavigationController *newNvc = [[JKNavigationController alloc] initWithRootViewController:newVC];
     [self addChildViewController:newNvc];
     
     // 添加 发布页面 控制器
@@ -36,12 +38,12 @@
     
     // 添加 关注页面 控制器
     JKFriendTrendVC *friendTrendVC = [[JKFriendTrendVC alloc] init];
-    UINavigationController *friendTrendNvc = [[UINavigationController alloc] initWithRootViewController:friendTrendVC];
+    JKNavigationController *friendTrendNvc = [[JKNavigationController alloc] initWithRootViewController:friendTrendVC];
     [self addChildViewController:friendTrendNvc];
     
     // 添加 我页面 控制器
     JKMeTVC *meVC = [[JKMeTVC alloc] init];
-    UINavigationController *meNvc = [[UINavigationController alloc] initWithRootViewController:meVC];
+    JKNavigationController *meNvc = [[JKNavigationController alloc] initWithRootViewController:meVC];
     [self addChildViewController:meNvc];
 }
 
@@ -51,7 +53,7 @@
     JKHomeVC *homeVC = self.childViewControllers[0];
     homeVC.tabBarItem.title = @"首页";
     homeVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    homeVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
+    homeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置tabBar上的 新帖 按钮
     JKNewVC *newVC = self.childViewControllers[1];

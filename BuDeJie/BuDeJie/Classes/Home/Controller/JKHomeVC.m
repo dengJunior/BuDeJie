@@ -23,27 +23,19 @@
     [titleView sizeToFit];
     self.navigationItem.titleView = titleView;
     
-    UIBarButtonItem *leftBar = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"nav_item_game_iconN"] highlightedImage:[UIImage imageNamed:@"nav_item_game_click_iconN"] target:self action:@selector(game)];
+    UIBarButtonItem *leftBar = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"nav_item_game_iconN"] highlightedImage:[UIImage imageNamed:@"nav_item_game_click_icon"] target:self action:@selector(game)];
     self.navigationItem.leftBarButtonItem = leftBar;
+    
+    UIBarButtonItem *rightBar = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"navigationButtonRandomN"] highlightedImage:[UIImage imageNamed:@"navigationButtonRandomClick"] target:self action:@selector(random)];
+    self.navigationItem.rightBarButtonItem = rightBar;
+}
+
+
+- (void)game {
     
 }
 
-//- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-//    
-//    if (self.childViewControllers.count > 0) {
-//        
-//        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [btn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-//        [btn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-//        [btn setTitle:@"返回" forState:UIControlStateNormal];
-//        [btn sizeToFit];
-//        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-//    }
-//    
-//    [super pushViewController:viewController animated:animated];
-//}
-
-- (void)game {
+- (void)random {
     
 }
 
