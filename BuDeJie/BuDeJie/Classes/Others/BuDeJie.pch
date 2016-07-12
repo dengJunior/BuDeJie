@@ -1,0 +1,23 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by Joker on 16/7/8.
+//  Copyright © 2016年 Joker. All rights reserved.
+//
+
+
+#import "UIView+JKFrame.h"
+
+#import "UIImage+JKRendering.h"
+
+#import "UIBarButtonItem+JKItem.h"
+
+
+#define screenW [UIScreen mainScreen].bounds.size.width
+#define screenH [UIScreen mainScreen].bounds.size.height
+
+#define iPhone4  (screenH == 480)
+#define iPhone5  (screenH == 568)
+#define iPhone6  (screenH == 667)
+#define iPhone6P (screenH == 736)

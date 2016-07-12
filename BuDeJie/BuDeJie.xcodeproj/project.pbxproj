@@ -7,20 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3DEE0E84C4FDD2EA50C24A0 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */; };
+		F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */; };
+		F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ECA1D30D8D000F92A01 /* JKNavigationController.m */; };
+		F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ED11D30DA1E00F92A01 /* JKSettingTVC.m */; };
+		F3239EDA1D30EFC000F92A01 /* JKAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ED81D30EFC000F92A01 /* JKAdVC.m */; };
+		F3239EDB1D30EFC000F92A01 /* JKAdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3239ED91D30EFC000F92A01 /* JKAdVC.xib */; };
+		F3239EE41D30F30E00F92A01 /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EDD1D30F30E00F92A01 /* LaunchImage-568h@2x.png */; };
+		F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EDE1D30F30E00F92A01 /* LaunchImage-700-568h@2x.png */; };
+		F3239EE61D30F30E00F92A01 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EDF1D30F30E00F92A01 /* LaunchImage-700@2x.png */; };
+		F3239EE71D30F30E00F92A01 /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE01D30F30E00F92A01 /* LaunchImage-800-667h@2x.png */; };
+		F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE11D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png */; };
+		F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE21D30F30E00F92A01 /* LaunchImage.png */; };
+		F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */; };
+		F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522B1D2F8CE300355741 /* JKTabBar.m */; };
+		F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522E1D2FCD3800355741 /* UIView+JKFrame.m */; };
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
 		F3C9FEB71D2E709A004BF32E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */; };
+		F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FED91D2E806A004BF32E /* JKTabBarC.m */; };
+		F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEDC1D2E80E1004BF32E /* JKHomeVC.m */; };
+		F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEDF1D2E8107004BF32E /* JKNewVC.m */; };
+		F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEE21D2E813C004BF32E /* JKPublishVC.m */; };
+		F3C9FEE61D2E8174004BF32E /* JKFriendTrendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEE51D2E8174004BF32E /* JKFriendTrendVC.m */; };
+		F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEE81D2E818A004BF32E /* JKMeTVC.m */; };
+		F3C9FEF31D2E8F31004BF32E /* UIImage+JKRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEF21D2E8F31004BF32E /* UIImage+JKRendering.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BCDAC0F33AE5C5BA75B0DFC6 /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
+		C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3AF2C526D702F346E8E541 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		F3239EC31D30A11C00F92A01 /* UIBarButtonItem+JKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JKItem.h"; sourceTree = "<group>"; };
+		F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JKItem.m"; sourceTree = "<group>"; };
+		F3239EC91D30D8D000F92A01 /* JKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNavigationController.h; sourceTree = "<group>"; };
+		F3239ECA1D30D8D000F92A01 /* JKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKNavigationController.m; sourceTree = "<group>"; };
+		F3239ED01D30DA1E00F92A01 /* JKSettingTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSettingTVC.h; sourceTree = "<group>"; };
+		F3239ED11D30DA1E00F92A01 /* JKSettingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSettingTVC.m; sourceTree = "<group>"; };
+		F3239ED71D30EFC000F92A01 /* JKAdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAdVC.h; sourceTree = "<group>"; };
+		F3239ED81D30EFC000F92A01 /* JKAdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAdVC.m; sourceTree = "<group>"; };
+		F3239ED91D30EFC000F92A01 /* JKAdVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKAdVC.xib; sourceTree = "<group>"; };
+		F3239EDD1D30F30E00F92A01 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		F3239EDE1D30F30E00F92A01 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		F3239EDF1D30F30E00F92A01 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		F3239EE01D30F30E00F92A01 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		F3239EE11D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		F3239EE21D30F30E00F92A01 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		F342522A1D2F8CE300355741 /* JKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTabBar.h; sourceTree = "<group>"; };
+		F342522B1D2F8CE300355741 /* JKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTabBar.m; sourceTree = "<group>"; };
+		F342522D1D2FCD3800355741 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKFrame.h"; sourceTree = "<group>"; };
+		F342522E1D2FCD3800355741 /* UIView+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKFrame.m"; sourceTree = "<group>"; };
+		F34252311D2FCF9000355741 /* BuDeJie.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		F3C9FEA41D2E709A004BF32E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C9FEA81D2E709A004BF32E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		F3C9FEB31D2E709A004BF32E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3C9FEB61D2E709A004BF32E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F3C9FEB81D2E709A004BF32E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C9FEB81D2E709A004BF32E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		F3C9FED81D2E806A004BF32E /* JKTabBarC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTabBarC.h; sourceTree = "<group>"; };
+		F3C9FED91D2E806A004BF32E /* JKTabBarC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTabBarC.m; sourceTree = "<group>"; };
+		F3C9FEDB1D2E80E1004BF32E /* JKHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKHomeVC.h; sourceTree = "<group>"; };
+		F3C9FEDC1D2E80E1004BF32E /* JKHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKHomeVC.m; sourceTree = "<group>"; };
+		F3C9FEDE1D2E8107004BF32E /* JKNewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNewVC.h; sourceTree = "<group>"; };
+		F3C9FEDF1D2E8107004BF32E /* JKNewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKNewVC.m; sourceTree = "<group>"; };
+		F3C9FEE11D2E813C004BF32E /* JKPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPublishVC.h; sourceTree = "<group>"; };
+		F3C9FEE21D2E813C004BF32E /* JKPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPublishVC.m; sourceTree = "<group>"; };
+		F3C9FEE41D2E8174004BF32E /* JKFriendTrendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKFriendTrendVC.h; sourceTree = "<group>"; };
+		F3C9FEE51D2E8174004BF32E /* JKFriendTrendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKFriendTrendVC.m; sourceTree = "<group>"; };
+		F3C9FEE71D2E818A004BF32E /* JKMeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMeTVC.h; sourceTree = "<group>"; };
+		F3C9FEE81D2E818A004BF32E /* JKMeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMeTVC.m; sourceTree = "<group>"; };
+		F3C9FEF11D2E8F31004BF32E /* UIImage+JKRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKRendering.h"; sourceTree = "<group>"; };
+		F3C9FEF21D2E8F31004BF32E /* UIImage+JKRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKRendering.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +88,118 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DEE0E84C4FDD2EA50C24A0 /* libPods-BuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BBFA44AE798D92DE4B551B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1948166EA6784281CDE1699 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE3AF2C526D702F346E8E541 /* Pods-BuDeJie.debug.xcconfig */,
+				BCDAC0F33AE5C5BA75B0DFC6 /* Pods-BuDeJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3239ECC1D30D9DC00F92A01 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F3239ECD1D30D9DC00F92A01 /* Controller */,
+				F3239ECE1D30D9DC00F92A01 /* Model */,
+				F3239ECF1D30D9DC00F92A01 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		F3239ECD1D30D9DC00F92A01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3239ED01D30DA1E00F92A01 /* JKSettingTVC.h */,
+				F3239ED11D30DA1E00F92A01 /* JKSettingTVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3239ECE1D30D9DC00F92A01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3239ECF1D30D9DC00F92A01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3239ED31D30EF4E00F92A01 /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				F3239ED41D30EF4E00F92A01 /* Controller */,
+				F3239ED51D30EF4E00F92A01 /* Model */,
+				F3239ED61D30EF4E00F92A01 /* View */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		F3239ED41D30EF4E00F92A01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3239ED71D30EFC000F92A01 /* JKAdVC.h */,
+				F3239ED81D30EFC000F92A01 /* JKAdVC.m */,
+				F3239ED91D30EFC000F92A01 /* JKAdVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3239ED51D30EF4E00F92A01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3239ED61D30EF4E00F92A01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3239EDC1D30F30E00F92A01 /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				F3239EDD1D30F30E00F92A01 /* LaunchImage-568h@2x.png */,
+				F3239EDE1D30F30E00F92A01 /* LaunchImage-700-568h@2x.png */,
+				F3239EDF1D30F30E00F92A01 /* LaunchImage-700@2x.png */,
+				F3239EE01D30F30E00F92A01 /* LaunchImage-800-667h@2x.png */,
+				F3239EE11D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png */,
+				F3239EE21D30F30E00F92A01 /* LaunchImage.png */,
+				F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */,
+			);
+			path = "启动图片";
+			sourceTree = "<group>";
+		};
 		F3C9FE9B1D2E709A004BF32E = {
 			isa = PBXGroup;
 			children = (
 				F3C9FEA61D2E709A004BF32E /* BuDeJie */,
 				F3C9FEA51D2E709A004BF32E /* Products */,
+				E1948166EA6784281CDE1699 /* Pods */,
+				0BBFA44AE798D92DE4B551B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F3C9FEBE1D2E7CBD004BF32E /* Classes */,
-				F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */,
-				F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */,
 				F3C9FEB31D2E709A004BF32E /* Assets.xcassets */,
-				F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */,
-				F3C9FEB81D2E709A004BF32E /* Info.plist */,
 				F3C9FEA71D2E709A004BF32E /* Supporting Files */,
 			);
 			path = BuDeJie;
@@ -67,6 +224,7 @@
 		F3C9FEA71D2E709A004BF32E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F3239EDC1D30F30E00F92A01 /* 启动图片 */,
 				F3C9FEA81D2E709A004BF32E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -81,6 +239,8 @@
 				F3C9FED31D2E7CBD004BF32E /* Publish */,
 				F3C9FEBF1D2E7CBD004BF32E /* FriendTrend */,
 				F3C9FECB1D2E7CBD004BF32E /* Me */,
+				F3239ED31D30EF4E00F92A01 /* Ad */,
+				F3239ECC1D30D9DC00F92A01 /* Setting */,
 				F3C9FED71D2E7D3B004BF32E /* Others */,
 			);
 			path = Classes;
@@ -99,6 +259,8 @@
 		F3C9FEC01D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEE41D2E8174004BF32E /* JKFriendTrendVC.h */,
+				F3C9FEE51D2E8174004BF32E /* JKFriendTrendVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +292,8 @@
 		F3C9FEC41D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEDB1D2E80E1004BF32E /* JKHomeVC.h */,
+				F3C9FEDC1D2E80E1004BF32E /* JKHomeVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +325,10 @@
 		F3C9FEC81D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FED81D2E806A004BF32E /* JKTabBarC.h */,
+				F3C9FED91D2E806A004BF32E /* JKTabBarC.m */,
+				F3239EC91D30D8D000F92A01 /* JKNavigationController.h */,
+				F3239ECA1D30D8D000F92A01 /* JKNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +343,8 @@
 		F3C9FECA1D2E7CBD004BF32E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F342522A1D2F8CE300355741 /* JKTabBar.h */,
+				F342522B1D2F8CE300355741 /* JKTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +362,8 @@
 		F3C9FECC1D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEE71D2E818A004BF32E /* JKMeTVC.h */,
+				F3C9FEE81D2E818A004BF32E /* JKMeTVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +395,8 @@
 		F3C9FED01D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEDE1D2E8107004BF32E /* JKNewVC.h */,
+				F3C9FEDF1D2E8107004BF32E /* JKNewVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,6 +428,8 @@
 		F3C9FED41D2E7CBD004BF32E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEE11D2E813C004BF32E /* JKPublishVC.h */,
+				F3C9FEE21D2E813C004BF32E /* JKPublishVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,8 +451,27 @@
 		F3C9FED71D2E7D3B004BF32E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				F3C9FEED1D2E8BB5004BF32E /* category */,
+				F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */,
+				F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */,
+				F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */,
+				F34252311D2FCF9000355741 /* BuDeJie.pch */,
+				F3C9FEB81D2E709A004BF32E /* Info.plist */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		F3C9FEED1D2E8BB5004BF32E /* category */ = {
+			isa = PBXGroup;
+			children = (
+				F3C9FEF11D2E8F31004BF32E /* UIImage+JKRendering.h */,
+				F3C9FEF21D2E8F31004BF32E /* UIImage+JKRendering.m */,
+				F342522D1D2FCD3800355741 /* UIView+JKFrame.h */,
+				F342522E1D2FCD3800355741 /* UIView+JKFrame.m */,
+				F3239EC31D30A11C00F92A01 /* UIBarButtonItem+JKItem.h */,
+				F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +481,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3C9FEBB1D2E709A004BF32E /* Build configuration list for PBXNativeTarget "BuDeJie" */;
 			buildPhases = (
+				A994EA3B32F50E930AA57BFE /* [CP] Check Pods Manifest.lock */,
 				F3C9FEA01D2E709A004BF32E /* Sources */,
 				F3C9FEA11D2E709A004BF32E /* Frameworks */,
 				F3C9FEA21D2E709A004BF32E /* Resources */,
+				81232A3D4F3A02B077DC141B /* [CP] Embed Pods Frameworks */,
+				389963CD43F6552BB7405503 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,6 +503,7 @@
 		F3C9FE9C1D2E709A004BF32E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JK;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Joker;
 				TargetAttributes = {
@@ -337,12 +536,68 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3239EDB1D30EFC000F92A01 /* JKAdVC.xib in Resources */,
+				F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */,
+				F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */,
 				F3C9FEB71D2E709A004BF32E /* LaunchScreen.storyboard in Resources */,
+				F3239EE61D30F30E00F92A01 /* LaunchImage-700@2x.png in Resources */,
+				F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				F3239EE41D30F30E00F92A01 /* LaunchImage-568h@2x.png in Resources */,
+				F3239EE71D30F30E00F92A01 /* LaunchImage-800-667h@2x.png in Resources */,
 				F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */,
+				F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		389963CD43F6552BB7405503 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81232A3D4F3A02B077DC141B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A994EA3B32F50E930AA57BFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3C9FEA01D2E709A004BF32E /* Sources */ = {
@@ -350,7 +605,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */,
+				F3C9FEE61D2E8174004BF32E /* JKFriendTrendVC.m in Sources */,
+				F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */,
+				F3239EDA1D30EFC000F92A01 /* JKAdVC.m in Sources */,
+				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
+				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
+				F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */,
+				F3C9FEF31D2E8F31004BF32E /* UIImage+JKRendering.m in Sources */,
+				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
+				F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */,
+				F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */,
+				F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */,
+				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
+				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +631,7 @@
 				F3C9FEB61D2E709A004BF32E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -452,10 +721,13 @@
 		};
 		F3C9FEBC1D2E709A004BF32E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE3AF2C526D702F346E8E541 /* Pods-BuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BuDeJie/Classes/Others/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -466,10 +738,13 @@
 		};
 		F3C9FEBD1D2E709A004BF32E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDAC0F33AE5C5BA75B0DFC6 /* Pods-BuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BuDeJie/Classes/Others/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -497,6 +772,7 @@
 				F3C9FEBD1D2E709A004BF32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
