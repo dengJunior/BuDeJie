@@ -22,6 +22,7 @@
 		F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */; };
 		F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522B1D2F8CE300355741 /* JKTabBar.m */; };
 		F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522E1D2FCD3800355741 /* UIView+JKFrame.m */; };
+		F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC11D35142A005405B9 /* JKADItem.m */; };
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
@@ -60,6 +61,8 @@
 		F342522D1D2FCD3800355741 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKFrame.h"; sourceTree = "<group>"; };
 		F342522E1D2FCD3800355741 /* UIView+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKFrame.m"; sourceTree = "<group>"; };
 		F34252311D2FCF9000355741 /* BuDeJie.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
+		F3BEBAC01D35142A005405B9 /* JKADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKADItem.h; sourceTree = "<group>"; };
+		F3BEBAC11D35142A005405B9 /* JKADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKADItem.m; sourceTree = "<group>"; };
 		F3C9FEA41D2E709A004BF32E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C9FEA81D2E709A004BF32E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 		F3239ED51D30EF4E00F92A01 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3BEBAC01D35142A005405B9 /* JKADItem.h */,
+				F3BEBAC11D35142A005405B9 /* JKADItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -618,6 +623,7 @@
 				F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */,
 				F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */,
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
+				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

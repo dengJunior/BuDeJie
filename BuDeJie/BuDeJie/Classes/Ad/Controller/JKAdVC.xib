@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="containerView" destination="ODb-va-e3f" id="2VU-Iy-K3d"/>
                 <outlet property="imageView" destination="QGh-sW-neN" id="R8t-DP-6Ok"/>
+                <outlet property="skipBtn" destination="LVI-zG-ydi" id="13r-qp-PRO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,14 +24,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-zG-ydi">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-zG-ydi">
                     <rect key="frame" x="290" y="20" width="65" height="28"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5403286637931034" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="DkN-sf-V6l"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="跳过(3)">
+                    <state key="normal" title="跳过 (3)">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
