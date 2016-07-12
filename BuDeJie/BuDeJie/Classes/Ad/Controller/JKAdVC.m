@@ -25,6 +25,8 @@
 
 @property (nonatomic, weak) NSTimer *timer;
 
+@property (nonatomic, strong) JKADItem *adItem;
+
 @end
 
 @implementation JKAdVC
@@ -77,6 +79,7 @@
         
         // 用模型保存返回的数据
         JKADItem *adItem = [JKADItem mj_objectWithKeyValues:responseObject[@"ad"][0]];
+        self.adItem = adItem;
         
         // 根据比例缩放返回的图片，让其宽度为屏宽
         CGFloat h = screenW / adItem.w.floatValue * adItem.h.floatValue;
@@ -84,6 +87,11 @@
         
         UIImageView *adImageView = [[UIImageView alloc] init];
         adImageView.frame = frame;
+        adImageView.userInteractionEnabled = YES;
+        
+        // 设置一个tap手势添加给广告图片，点击是跳转到广告连接
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToAdUrl)];
+        [adImageView addGestureRecognizer:tap];
         
         // 设置图片
         [adImageView sd_setImageWithURL:[NSURL URLWithString:adItem.w_picurl]];
@@ -125,7 +133,17 @@
     [self.skipBtn setTitle:btnStr forState:UIControlStateNormal];
 }
 
-
+/** 点击广告图片时，跳转 */
+- (void)jumpToAdUrl {
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSURL *url = [NSURL URLWithString:self.adItem.ori_curl];
+    // 判断是否能跳转
+    if ([app canOpenURL:url]) {
+        // 能跳就跳
+        [app openURL:url];
+    }
+}
 
 
 
