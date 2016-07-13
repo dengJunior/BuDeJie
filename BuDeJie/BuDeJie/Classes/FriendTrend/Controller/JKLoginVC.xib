@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JKLoginVC">
             <connections>
-                <outlet property="bottomView" destination="QF8-ZP-byv" id="l9A-zY-YMU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,13 +58,6 @@
                         <constraint firstAttribute="bottom" secondItem="IDE-Y5-0U1" secondAttribute="bottom" id="zCe-D5-BOY"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QF8-ZP-byv">
-                    <rect key="frame" x="0.0" y="517" width="375" height="150"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="VTH-E1-dOL"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -73,9 +65,6 @@
                 <constraint firstItem="2zm-3k-zfw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F8D-YS-Nar"/>
                 <constraint firstAttribute="bottom" secondItem="2zm-3k-zfw" secondAttribute="bottom" id="Rxf-AU-v3J"/>
                 <constraint firstItem="hNC-zt-5A7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="U79-RN-NBL"/>
-                <constraint firstAttribute="bottom" secondItem="QF8-ZP-byv" secondAttribute="bottom" id="W8d-e0-Q6S"/>
-                <constraint firstAttribute="trailing" secondItem="QF8-ZP-byv" secondAttribute="trailing" id="XXl-3O-qqS"/>
-                <constraint firstItem="QF8-ZP-byv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZVK-TT-ahQ"/>
                 <constraint firstItem="2zm-3k-zfw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cEH-J6-8bO"/>
                 <constraint firstAttribute="trailing" secondItem="2zm-3k-zfw" secondAttribute="trailing" id="gC5-AC-9NC"/>
                 <constraint firstAttribute="trailing" secondItem="hNC-zt-5A7" secondAttribute="trailing" id="pIH-u8-J8X"/>

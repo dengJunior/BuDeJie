@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,67 +11,77 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xNJ-zN-bNn">
-                    <rect key="frame" x="0.0" y="30" width="375" height="100"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-nM-Ngd" customClass="JKThirdLoginBtn">
-                            <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
-                            <state key="normal" title="QQ登录" image="login_QQ_icon"/>
-                            <state key="highlighted" title="QQ登录" image="login_QQ_icon_click"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJM-Ko-35Y" customClass="JKThirdLoginBtn">
-                            <rect key="frame" x="125" y="0.0" width="125" height="100"/>
-                            <state key="normal" title="微博登录" image="login_sina_icon"/>
-                            <state key="highlighted" title="微博登录" image="login_sina_icon_click"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ot-Vd-so3" customClass="JKThirdLoginBtn">
-                            <rect key="frame" x="250" y="0.0" width="125" height="100"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="腾讯登录" image="login_tecent_icon"/>
-                            <state key="highlighted" title="腾讯登录" image="login_tecent_icon_click"/>
-                        </button>
-                    </subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJM-Ko-35Y" customClass="JKThirdLoginBtn">
+                    <rect key="frame" x="125" y="30" width="125" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="ez1-Cc-RFs"/>
+                        <constraint firstAttribute="height" constant="100" id="fqu-AT-wlg"/>
                     </constraints>
-                </stackView>
+                    <state key="normal" title="微博登录" image="login_sina_icon"/>
+                    <state key="highlighted" title="微博登录" image="login_sina_icon_click"/>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快速登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17s-fr-JTJ">
-                    <rect key="frame" x="154" y="0.0" width="68" height="30"/>
+                    <rect key="frame" x="148" y="0.0" width="80" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Ypn-gB-Gjx"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_left_line" translatesAutoresizingMaskIntoConstraints="NO" id="j8x-Vn-5I8">
-                    <rect key="frame" x="0.0" y="15" width="154" height="1"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ot-Vd-so3" customClass="JKThirdLoginBtn">
+                    <rect key="frame" x="250" y="30" width="125" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="腾讯登录" image="login_tecent_icon"/>
+                    <state key="highlighted" title="腾讯登录" image="login_tecent_icon_click"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-nM-Ngd" customClass="JKThirdLoginBtn">
+                    <rect key="frame" x="0.0" y="30" width="125" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="QQ登录" image="login_QQ_icon"/>
+                    <state key="highlighted" title="QQ登录" image="login_QQ_icon_click"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_left_line" translatesAutoresizingMaskIntoConstraints="NO" id="GYC-QG-bmO">
+                    <rect key="frame" x="0.0" y="15" width="148" height="1"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="UUS-g8-UH7"/>
+                        <constraint firstAttribute="height" constant="1" id="MZo-j8-8uL"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="login_register_right_line" translatesAutoresizingMaskIntoConstraints="NO" id="H37-kz-5BX">
-                    <rect key="frame" x="221" y="15" width="154" height="1"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_right_line" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-vK-fTQ">
+                    <rect key="frame" x="228" y="15" width="147" height="1"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="ilE-kp-ybc"/>
+                        <constraint firstAttribute="height" constant="1" id="FFt-86-fVB"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="xNJ-zN-bNn" secondAttribute="bottom" constant="20" id="3zM-2d-ywJ"/>
-                <constraint firstItem="H37-kz-5BX" firstAttribute="leading" secondItem="17s-fr-JTJ" secondAttribute="trailing" constant="-1" id="J1v-3h-tvb"/>
-                <constraint firstItem="j8x-Vn-5I8" firstAttribute="centerY" secondItem="17s-fr-JTJ" secondAttribute="centerY" id="MyZ-lr-qy6"/>
-                <constraint firstItem="17s-fr-JTJ" firstAttribute="top" secondItem="nFA-lh-zZt" secondAttribute="top" id="OAc-Od-AzP"/>
-                <constraint firstItem="xNJ-zN-bNn" firstAttribute="top" secondItem="17s-fr-JTJ" secondAttribute="bottom" id="WYI-iL-7MO"/>
-                <constraint firstItem="xNJ-zN-bNn" firstAttribute="leading" secondItem="nFA-lh-zZt" secondAttribute="leading" id="Wop-yo-9tg"/>
-                <constraint firstAttribute="trailing" secondItem="H37-kz-5BX" secondAttribute="trailing" id="iW3-1c-Vuo"/>
-                <constraint firstItem="H37-kz-5BX" firstAttribute="centerY" secondItem="17s-fr-JTJ" secondAttribute="centerY" id="nTJ-xw-gvw"/>
-                <constraint firstItem="17s-fr-JTJ" firstAttribute="leading" secondItem="j8x-Vn-5I8" secondAttribute="trailing" id="qkK-c3-Tkh"/>
-                <constraint firstItem="j8x-Vn-5I8" firstAttribute="leading" secondItem="nFA-lh-zZt" secondAttribute="leading" id="qvh-r3-wJd"/>
-                <constraint firstItem="17s-fr-JTJ" firstAttribute="centerX" secondItem="nFA-lh-zZt" secondAttribute="centerX" id="rYE-no-wDg"/>
-                <constraint firstAttribute="trailing" secondItem="xNJ-zN-bNn" secondAttribute="trailing" id="z5R-1s-Pgz"/>
+                <constraint firstAttribute="bottom" secondItem="sJM-Ko-35Y" secondAttribute="bottom" constant="20" id="2m2-Xd-pni"/>
+                <constraint firstItem="sJM-Ko-35Y" firstAttribute="top" secondItem="17s-fr-JTJ" secondAttribute="bottom" id="3UI-5j-Ku5"/>
+                <constraint firstItem="3Ot-Vd-so3" firstAttribute="width" secondItem="sJM-Ko-35Y" secondAttribute="width" id="66A-RQ-umD"/>
+                <constraint firstItem="3Ot-Vd-so3" firstAttribute="leading" secondItem="sJM-Ko-35Y" secondAttribute="trailing" id="C3p-0d-IIT"/>
+                <constraint firstItem="17s-fr-JTJ" firstAttribute="leading" secondItem="GYC-QG-bmO" secondAttribute="trailing" id="CQT-HJ-pjf"/>
+                <constraint firstItem="GYC-QG-bmO" firstAttribute="centerY" secondItem="17s-fr-JTJ" secondAttribute="centerY" id="F1a-4q-Fbh"/>
+                <constraint firstItem="zn0-vK-fTQ" firstAttribute="leading" secondItem="17s-fr-JTJ" secondAttribute="trailing" id="F8X-Pm-IT3"/>
+                <constraint firstItem="zn0-vK-fTQ" firstAttribute="centerY" secondItem="17s-fr-JTJ" secondAttribute="centerY" id="FDZ-cL-148"/>
+                <constraint firstItem="3Ot-Vd-so3" firstAttribute="top" secondItem="sJM-Ko-35Y" secondAttribute="top" id="Kk4-h7-IBQ"/>
+                <constraint firstItem="s5i-nM-Ngd" firstAttribute="top" secondItem="sJM-Ko-35Y" secondAttribute="top" id="Nn2-3W-Lyj"/>
+                <constraint firstItem="s5i-nM-Ngd" firstAttribute="height" secondItem="sJM-Ko-35Y" secondAttribute="height" id="Teh-dw-SIF"/>
+                <constraint firstItem="GYC-QG-bmO" firstAttribute="leading" secondItem="nFA-lh-zZt" secondAttribute="leading" id="Uei-My-Yn6"/>
+                <constraint firstItem="3Ot-Vd-so3" firstAttribute="height" secondItem="sJM-Ko-35Y" secondAttribute="height" id="VBV-AN-wfI"/>
+                <constraint firstItem="sJM-Ko-35Y" firstAttribute="centerX" secondItem="nFA-lh-zZt" secondAttribute="centerX" id="fXM-DU-Y2P"/>
+                <constraint firstItem="sJM-Ko-35Y" firstAttribute="width" secondItem="nFA-lh-zZt" secondAttribute="width" multiplier="0.33333" id="kde-As-b5z"/>
+                <constraint firstItem="s5i-nM-Ngd" firstAttribute="width" secondItem="sJM-Ko-35Y" secondAttribute="width" id="msm-di-0tk"/>
+                <constraint firstItem="17s-fr-JTJ" firstAttribute="top" secondItem="nFA-lh-zZt" secondAttribute="top" id="oPG-6F-iz6"/>
+                <constraint firstItem="sJM-Ko-35Y" firstAttribute="leading" secondItem="s5i-nM-Ngd" secondAttribute="trailing" id="ohm-6n-q9g"/>
+                <constraint firstAttribute="trailing" secondItem="zn0-vK-fTQ" secondAttribute="trailing" id="tos-Hh-b4M"/>
+                <constraint firstItem="17s-fr-JTJ" firstAttribute="centerX" secondItem="nFA-lh-zZt" secondAttribute="centerX" id="uoo-to-wzk"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="295.5" y="374"/>
+            <point key="canvasLocation" x="336.5" y="457"/>
         </view>
     </objects>
     <resources>

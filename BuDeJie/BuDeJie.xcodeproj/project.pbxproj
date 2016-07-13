@@ -36,6 +36,10 @@
 		F3BEBAEA1D363355005405B9 /* JKFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAE91D363355005405B9 /* JKFastLoginView.m */; };
 		F3BEBAEC1D363361005405B9 /* JKFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBAEB1D363361005405B9 /* JKFastLoginView.xib */; };
 		F3BEBAF21D3640BD005405B9 /* JKThirdLoginBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAF11D3640BD005405B9 /* JKThirdLoginBtn.m */; };
+		F3BEBAF61D365180005405B9 /* JKMeTVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBAF51D365180005405B9 /* JKMeTVC.storyboard */; };
+		F3BEBAF91D365A91005405B9 /* JKSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAF81D365A91005405B9 /* JKSquareItem.m */; };
+		F3BEBB021D367290005405B9 /* JKSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBB001D367290005405B9 /* JKSquareCell.m */; };
+		F3BEBB031D367290005405B9 /* JKSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBB011D367290005405B9 /* JKSquareCell.xib */; };
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
@@ -97,6 +101,12 @@
 		F3BEBAEB1D363361005405B9 /* JKFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKFastLoginView.xib; sourceTree = "<group>"; };
 		F3BEBAF01D3640BD005405B9 /* JKThirdLoginBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKThirdLoginBtn.h; sourceTree = "<group>"; };
 		F3BEBAF11D3640BD005405B9 /* JKThirdLoginBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKThirdLoginBtn.m; sourceTree = "<group>"; };
+		F3BEBAF51D365180005405B9 /* JKMeTVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JKMeTVC.storyboard; sourceTree = "<group>"; };
+		F3BEBAF71D365A91005405B9 /* JKSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSquareItem.h; sourceTree = "<group>"; };
+		F3BEBAF81D365A91005405B9 /* JKSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSquareItem.m; sourceTree = "<group>"; };
+		F3BEBAFF1D367290005405B9 /* JKSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSquareCell.h; sourceTree = "<group>"; };
+		F3BEBB001D367290005405B9 /* JKSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSquareCell.m; sourceTree = "<group>"; };
+		F3BEBB011D367290005405B9 /* JKSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSquareCell.xib; sourceTree = "<group>"; };
 		F3C9FEA41D2E709A004BF32E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C9FEA81D2E709A004BF32E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -415,6 +425,7 @@
 			children = (
 				F3C9FEE71D2E818A004BF32E /* JKMeTVC.h */,
 				F3C9FEE81D2E818A004BF32E /* JKMeTVC.m */,
+				F3BEBAF51D365180005405B9 /* JKMeTVC.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,6 +433,8 @@
 		F3C9FECD1D2E7CBD004BF32E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3BEBAF71D365A91005405B9 /* JKSquareItem.h */,
+				F3BEBAF81D365A91005405B9 /* JKSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,6 +442,9 @@
 		F3C9FECE1D2E7CBD004BF32E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3BEBAFF1D367290005405B9 /* JKSquareCell.h */,
+				F3BEBB001D367290005405B9 /* JKSquareCell.m */,
+				F3BEBB011D367290005405B9 /* JKSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,7 +624,9 @@
 				F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				F3239EE41D30F30E00F92A01 /* LaunchImage-568h@2x.png in Resources */,
 				F3239EE71D30F30E00F92A01 /* LaunchImage-800-667h@2x.png in Resources */,
+				F3BEBB031D367290005405B9 /* JKSquareCell.xib in Resources */,
 				F3BEBAEC1D363361005405B9 /* JKFastLoginView.xib in Resources */,
+				F3BEBAF61D365180005405B9 /* JKMeTVC.storyboard in Resources */,
 				F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */,
 				F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */,
 			);
@@ -682,6 +700,7 @@
 				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
 				F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */,
+				F3BEBB021D367290005405B9 /* JKSquareCell.m in Sources */,
 				F3C9FEF31D2E8F31004BF32E /* UIImage+JKRendering.m in Sources */,
 				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
 				F3BEBAEA1D363355005405B9 /* JKFastLoginView.m in Sources */,
@@ -693,6 +712,7 @@
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
 				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
+				F3BEBAF91D365A91005405B9 /* JKSquareItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

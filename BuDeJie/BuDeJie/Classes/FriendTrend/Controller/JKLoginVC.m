@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic)  UIView *centerView;
 
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic)  UIView *bottomView;
 
 @end
 
@@ -48,8 +48,13 @@
 
 /** 设置底部快速登录视图 */
 - (void)setupBottomView {
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, screenH - 150, screenW, 150)];
+    [self.view addSubview:bottomView];
+    _bottomView = bottomView;
+    
     JKFastLoginView *fastLoginView = [JKFastLoginView fastLoginView];
-    [self.bottomView addSubview:fastLoginView];
+    fastLoginView.frame = CGRectMake(0, 0, screenW, 150);
+    [bottomView addSubview:fastLoginView];
 }
 
 /** 点击关闭按钮时 */

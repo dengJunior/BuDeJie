@@ -42,8 +42,9 @@
     [self addChildViewController:friendTrendNvc];
     
     // 添加 我页面 控制器
-    JKMeTVC *meVC = [[JKMeTVC alloc] init];
-    JKNavigationController *meNvc = [[JKNavigationController alloc] initWithRootViewController:meVC];
+    UIStoryboard *meStoryboard = [UIStoryboard storyboardWithName:NSStringFromClass([JKMeTVC class]) bundle:nil];
+    JKMeTVC *meTvc = [meStoryboard instantiateInitialViewController];
+    JKNavigationController *meNvc = [[JKNavigationController alloc] initWithRootViewController:meTvc];
     [self addChildViewController:meNvc];
 }
 
