@@ -33,6 +33,9 @@
 		F3BEBADC1D35F35E005405B9 /* JKLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBADB1D35F35E005405B9 /* JKLoginRegisterView.m */; };
 		F3BEBADE1D35F36B005405B9 /* JKLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBADD1D35F36B005405B9 /* JKLoginRegisterView.xib */; };
 		F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */; };
+		F3BEBAEA1D363355005405B9 /* JKFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAE91D363355005405B9 /* JKFastLoginView.m */; };
+		F3BEBAEC1D363361005405B9 /* JKFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBAEB1D363361005405B9 /* JKFastLoginView.xib */; };
+		F3BEBAEF1D3634A0005405B9 /* JKThirdLoginBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAEE1D3634A0005405B9 /* JKThirdLoginBtn.m */; };
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
@@ -89,6 +92,11 @@
 		F3BEBADD1D35F36B005405B9 /* JKLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKLoginRegisterView.xib; sourceTree = "<group>"; };
 		F3BEBAE21D3631E6005405B9 /* JKLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLoginTextField.h; sourceTree = "<group>"; };
 		F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLoginTextField.m; sourceTree = "<group>"; };
+		F3BEBAE81D363355005405B9 /* JKFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKFastLoginView.h; sourceTree = "<group>"; };
+		F3BEBAE91D363355005405B9 /* JKFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKFastLoginView.m; sourceTree = "<group>"; };
+		F3BEBAEB1D363361005405B9 /* JKFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKFastLoginView.xib; sourceTree = "<group>"; };
+		F3BEBAED1D3634A0005405B9 /* JKThirdLoginBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKThirdLoginBtn.h; sourceTree = "<group>"; };
+		F3BEBAEE1D3634A0005405B9 /* JKThirdLoginBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKThirdLoginBtn.m; sourceTree = "<group>"; };
 		F3C9FEA41D2E709A004BF32E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C9FEA81D2E709A004BF32E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -313,6 +321,9 @@
 				F3BEBADA1D35F35E005405B9 /* JKLoginRegisterView.h */,
 				F3BEBADB1D35F35E005405B9 /* JKLoginRegisterView.m */,
 				F3BEBADD1D35F36B005405B9 /* JKLoginRegisterView.xib */,
+				F3BEBAE81D363355005405B9 /* JKFastLoginView.h */,
+				F3BEBAE91D363355005405B9 /* JKFastLoginView.m */,
+				F3BEBAEB1D363361005405B9 /* JKFastLoginView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,6 +528,8 @@
 				F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */,
 				F3BEBAE21D3631E6005405B9 /* JKLoginTextField.h */,
 				F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */,
+				F3BEBAED1D3634A0005405B9 /* JKThirdLoginBtn.h */,
+				F3BEBAEE1D3634A0005405B9 /* JKThirdLoginBtn.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -595,6 +608,7 @@
 				F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				F3239EE41D30F30E00F92A01 /* LaunchImage-568h@2x.png in Resources */,
 				F3239EE71D30F30E00F92A01 /* LaunchImage-800-667h@2x.png in Resources */,
+				F3BEBAEC1D363361005405B9 /* JKFastLoginView.xib in Resources */,
 				F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */,
 				F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */,
 			);
@@ -664,11 +678,13 @@
 				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
 				F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */,
+				F3BEBAEF1D3634A0005405B9 /* JKThirdLoginBtn.m in Sources */,
 				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
 				F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */,
 				F3C9FEF31D2E8F31004BF32E /* UIImage+JKRendering.m in Sources */,
 				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
+				F3BEBAEA1D363355005405B9 /* JKFastLoginView.m in Sources */,
 				F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */,
 				F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */,
 				F3BEBADC1D35F35E005405B9 /* JKLoginRegisterView.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "JKLoginVC.h"
 #import "JKLoginRegisterView.h"
+#import "JKFastLoginView.h"
 
 @interface JKLoginVC ()
 
@@ -47,7 +48,8 @@
 
 /** 设置底部快速登录视图 */
 - (void)setupBottomView {
-    
+    JKFastLoginView *fastLoginView = [JKFastLoginView fastLoginView];
+    [self.bottomView addSubview:fastLoginView];
 }
 
 /** 点击关闭按钮时 */
