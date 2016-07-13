@@ -23,6 +23,10 @@
 		F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522B1D2F8CE300355741 /* JKTabBar.m */; };
 		F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522E1D2FCD3800355741 /* UIView+JKFrame.m */; };
 		F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC11D35142A005405B9 /* JKADItem.m */; };
+		F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC41D351F4D005405B9 /* JKSubTagTVC.m */; };
+		F3BEBAC81D35238D005405B9 /* JKSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC71D35238D005405B9 /* JKSubTagItem.m */; };
+		F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBACA1D3523CB005405B9 /* JKSubTagCell.m */; };
+		F3BEBACD1D3523CB005405B9 /* JKSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBACB1D3523CB005405B9 /* JKSubTagCell.xib */; };
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
@@ -63,6 +67,13 @@
 		F34252311D2FCF9000355741 /* BuDeJie.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		F3BEBAC01D35142A005405B9 /* JKADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKADItem.h; sourceTree = "<group>"; };
 		F3BEBAC11D35142A005405B9 /* JKADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKADItem.m; sourceTree = "<group>"; };
+		F3BEBAC31D351F4D005405B9 /* JKSubTagTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTagTVC.h; sourceTree = "<group>"; };
+		F3BEBAC41D351F4D005405B9 /* JKSubTagTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTagTVC.m; sourceTree = "<group>"; };
+		F3BEBAC61D35238D005405B9 /* JKSubTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTagItem.h; sourceTree = "<group>"; };
+		F3BEBAC71D35238D005405B9 /* JKSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTagItem.m; sourceTree = "<group>"; };
+		F3BEBAC91D3523CB005405B9 /* JKSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTagCell.h; sourceTree = "<group>"; };
+		F3BEBACA1D3523CB005405B9 /* JKSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTagCell.m; sourceTree = "<group>"; };
+		F3BEBACB1D3523CB005405B9 /* JKSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSubTagCell.xib; sourceTree = "<group>"; };
 		F3C9FEA41D2E709A004BF32E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C9FEA81D2E709A004BF32E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -402,6 +413,8 @@
 			children = (
 				F3C9FEDE1D2E8107004BF32E /* JKNewVC.h */,
 				F3C9FEDF1D2E8107004BF32E /* JKNewVC.m */,
+				F3BEBAC31D351F4D005405B9 /* JKSubTagTVC.h */,
+				F3BEBAC41D351F4D005405B9 /* JKSubTagTVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,6 +422,8 @@
 		F3C9FED11D2E7CBD004BF32E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3BEBAC61D35238D005405B9 /* JKSubTagItem.h */,
+				F3BEBAC71D35238D005405B9 /* JKSubTagItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +431,9 @@
 		F3C9FED21D2E7CBD004BF32E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3BEBAC91D3523CB005405B9 /* JKSubTagCell.h */,
+				F3BEBACA1D3523CB005405B9 /* JKSubTagCell.m */,
+				F3BEBACB1D3523CB005405B9 /* JKSubTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BEBACD1D3523CB005405B9 /* JKSubTagCell.xib in Resources */,
 				F3239EDB1D30EFC000F92A01 /* JKAdVC.xib in Resources */,
 				F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */,
 				F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */,
@@ -610,9 +629,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */,
+				F3BEBAC81D35238D005405B9 /* JKSubTagItem.m in Sources */,
 				F3C9FEE61D2E8174004BF32E /* JKFriendTrendVC.m in Sources */,
 				F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */,
 				F3239EDA1D30EFC000F92A01 /* JKAdVC.m in Sources */,
+				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
 				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
@@ -625,6 +646,7 @@
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
+				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

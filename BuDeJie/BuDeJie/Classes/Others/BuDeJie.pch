@@ -21,3 +21,7 @@
 #define iPhone5  (screenH == 568)
 #define iPhone6  (screenH == 667)
 #define iPhone6P (screenH == 736)
+
+
+#define colorWith(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
+

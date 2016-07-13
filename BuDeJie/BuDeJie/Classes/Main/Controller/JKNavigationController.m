@@ -41,8 +41,11 @@
 //    NSLog(@"%@", self.interactivePopGestureRecognizer);
     // 设置返回按钮要在下一个控制器push出来之前
     if (self.childViewControllers.count > 0) {
-        // 如果当前控制器不是根控制器时，统一自定义设置导航栏左边的返回按钮
         
+        // 每次push出一个新控制器，都应该将底部的tabBar隐藏
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+        // 如果当前控制器不是根控制器时，统一自定义设置导航栏左边的返回按钮
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         // 设置返回按钮图片
         [btn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];

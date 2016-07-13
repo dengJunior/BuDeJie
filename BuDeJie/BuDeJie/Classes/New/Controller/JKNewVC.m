@@ -7,6 +7,7 @@
 //
 
 #import "JKNewVC.h"
+#import "JKSubTagTVC.h"
 
 @implementation JKNewVC
 
@@ -30,6 +31,10 @@
 
 - (void)mainTagSub {
     
+    JKSubTagTVC *subTagTvc = [[JKSubTagTVC alloc] init];
+    
+    // 注意push出订阅页面控制器后应该将地步tabBar隐藏，写到navigationController中
+    [self.navigationController pushViewController:subTagTvc animated:YES];
 }
 
 @end
