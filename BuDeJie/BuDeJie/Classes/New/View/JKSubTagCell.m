@@ -26,8 +26,11 @@
     
     [_iconImageView sd_setImageWithURL:[NSURL URLWithString:subTagItem.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:kNilOptions completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
+        // 如果URL没有图片，就用占位图片来裁剪
+        if (image == nil) image = [UIImage imageNamed:@"defaultUserIcon"];
         // 用上下文裁剪方式设置图片圆角
-//        [image circleImage]
+        _iconImageView.image = [UIImage circleImageWithOriginalImage:image];
+      
     }];
     _titleLabel.text = subTagItem.theme_name;
     _numberLabel.text = subTagItem.sub_number;

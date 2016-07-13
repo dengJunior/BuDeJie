@@ -27,4 +27,15 @@
  */
 + (UIImage *)imageNamed:(NSString *)imageName WithRendingMode:(UIImageRenderingMode)mode;
 
+/**
+ *  将提供的方形图片裁剪成圆形
+ *
+ *  <p>提示：本方法是用图形上下文做的裁剪 <p>
+ *
+ *  @param oriImage 方形初始图片
+ *
+ *  @return 返回裁剪后的圆形图片
+ */
++ (UIImage *)circleImageWithOriginalImage:(UIImage *)oriImage;
+
 @end

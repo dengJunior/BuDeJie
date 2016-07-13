@@ -79,5 +79,11 @@ static NSString *subTagCellID = @"subTagCell";
     return 60 + 2;
 }
 
+#pragma mark -
+#pragma mark TableView delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end
