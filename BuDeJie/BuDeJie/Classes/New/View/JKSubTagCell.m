@@ -24,16 +24,26 @@
     
     _subTagItem = subTagItem;
     
+    _titleLabel.text = subTagItem.theme_name;
+    
     [_iconImageView sd_setImageWithURL:[NSURL URLWithString:subTagItem.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:kNilOptions completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
         // 如果URL没有图片，就用占位图片来裁剪
         if (image == nil) image = [UIImage imageNamed:@"defaultUserIcon"];
         // 用上下文裁剪方式设置图片圆角
         _iconImageView.image = [UIImage circleImageWithOriginalImage:image];
-      
+        
     }];
-    _titleLabel.text = subTagItem.theme_name;
-    _numberLabel.text = subTagItem.sub_number;
+    
+    NSString *str = [NSString stringWithFormat:@"%@人已定阅", subTagItem.sub_number];
+    NSInteger num = str.integerValue;
+    
+    if (num >= 10000) {
+        CGFloat numF = num / 10000.0;
+        str = [NSString stringWithFormat:@"%.1f万人已定阅", numF];
+        str = [str stringByReplacingOccurrencesOfString:@".0" withString:@""];
+    }
+    _numberLabel.text = str;
 }
 
 - (void)awakeFromNib {

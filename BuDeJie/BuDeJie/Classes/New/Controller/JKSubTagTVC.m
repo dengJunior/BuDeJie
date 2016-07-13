@@ -24,6 +24,9 @@ static NSString *subTagCellID = @"subTagCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"推荐标签";
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.view.backgroundColor = colorWith(215, 215, 215);
     
