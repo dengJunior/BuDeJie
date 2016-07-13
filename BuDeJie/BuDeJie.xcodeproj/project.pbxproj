@@ -27,6 +27,12 @@
 		F3BEBAC81D35238D005405B9 /* JKSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC71D35238D005405B9 /* JKSubTagItem.m */; };
 		F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBACA1D3523CB005405B9 /* JKSubTagCell.m */; };
 		F3BEBACD1D3523CB005405B9 /* JKSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBACB1D3523CB005405B9 /* JKSubTagCell.xib */; };
+		F3BEBAD11D35E3C0005405B9 /* JKLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBACF1D35E3C0005405B9 /* JKLoginVC.m */; };
+		F3BEBAD21D35E3C0005405B9 /* JKLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBAD01D35E3C0005405B9 /* JKLoginVC.xib */; };
+		F3BEBAD41D35E600005405B9 /* JKFriendTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBAD31D35E600005405B9 /* JKFriendTrendVC.xib */; };
+		F3BEBADC1D35F35E005405B9 /* JKLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBADB1D35F35E005405B9 /* JKLoginRegisterView.m */; };
+		F3BEBADE1D35F36B005405B9 /* JKLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BEBADD1D35F36B005405B9 /* JKLoginRegisterView.xib */; };
+		F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */; };
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
@@ -74,6 +80,15 @@
 		F3BEBAC91D3523CB005405B9 /* JKSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTagCell.h; sourceTree = "<group>"; };
 		F3BEBACA1D3523CB005405B9 /* JKSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSubTagCell.m; sourceTree = "<group>"; };
 		F3BEBACB1D3523CB005405B9 /* JKSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKSubTagCell.xib; sourceTree = "<group>"; };
+		F3BEBACE1D35E3C0005405B9 /* JKLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLoginVC.h; sourceTree = "<group>"; };
+		F3BEBACF1D35E3C0005405B9 /* JKLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLoginVC.m; sourceTree = "<group>"; };
+		F3BEBAD01D35E3C0005405B9 /* JKLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKLoginVC.xib; sourceTree = "<group>"; };
+		F3BEBAD31D35E600005405B9 /* JKFriendTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKFriendTrendVC.xib; sourceTree = "<group>"; };
+		F3BEBADA1D35F35E005405B9 /* JKLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLoginRegisterView.h; sourceTree = "<group>"; };
+		F3BEBADB1D35F35E005405B9 /* JKLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLoginRegisterView.m; sourceTree = "<group>"; };
+		F3BEBADD1D35F36B005405B9 /* JKLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKLoginRegisterView.xib; sourceTree = "<group>"; };
+		F3BEBAE21D3631E6005405B9 /* JKLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLoginTextField.h; sourceTree = "<group>"; };
+		F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLoginTextField.m; sourceTree = "<group>"; };
 		F3C9FEA41D2E709A004BF32E /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C9FEA81D2E709A004BF32E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -277,6 +292,10 @@
 			children = (
 				F3C9FEE41D2E8174004BF32E /* JKFriendTrendVC.h */,
 				F3C9FEE51D2E8174004BF32E /* JKFriendTrendVC.m */,
+				F3BEBAD31D35E600005405B9 /* JKFriendTrendVC.xib */,
+				F3BEBACE1D35E3C0005405B9 /* JKLoginVC.h */,
+				F3BEBACF1D35E3C0005405B9 /* JKLoginVC.m */,
+				F3BEBAD01D35E3C0005405B9 /* JKLoginVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +310,9 @@
 		F3C9FEC21D2E7CBD004BF32E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3BEBADA1D35F35E005405B9 /* JKLoginRegisterView.h */,
+				F3BEBADB1D35F35E005405B9 /* JKLoginRegisterView.m */,
+				F3BEBADD1D35F36B005405B9 /* JKLoginRegisterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +515,8 @@
 				F342522E1D2FCD3800355741 /* UIView+JKFrame.m */,
 				F3239EC31D30A11C00F92A01 /* UIBarButtonItem+JKItem.h */,
 				F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */,
+				F3BEBAE21D3631E6005405B9 /* JKLoginTextField.h */,
+				F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -561,9 +585,12 @@
 			files = (
 				F3BEBACD1D3523CB005405B9 /* JKSubTagCell.xib in Resources */,
 				F3239EDB1D30EFC000F92A01 /* JKAdVC.xib in Resources */,
+				F3BEBADE1D35F36B005405B9 /* JKLoginRegisterView.xib in Resources */,
 				F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */,
 				F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */,
 				F3C9FEB71D2E709A004BF32E /* LaunchScreen.storyboard in Resources */,
+				F3BEBAD21D35E3C0005405B9 /* JKLoginVC.xib in Resources */,
+				F3BEBAD41D35E600005405B9 /* JKFriendTrendVC.xib in Resources */,
 				F3239EE61D30F30E00F92A01 /* LaunchImage-700@2x.png in Resources */,
 				F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				F3239EE41D30F30E00F92A01 /* LaunchImage-568h@2x.png in Resources */,
@@ -633,8 +660,10 @@
 				F3C9FEE61D2E8174004BF32E /* JKFriendTrendVC.m in Sources */,
 				F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */,
 				F3239EDA1D30EFC000F92A01 /* JKAdVC.m in Sources */,
+				F3BEBAD11D35E3C0005405B9 /* JKLoginVC.m in Sources */,
 				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
+				F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */,
 				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
 				F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */,
@@ -642,6 +671,7 @@
 				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
 				F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */,
 				F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */,
+				F3BEBADC1D35F35E005405B9 /* JKLoginRegisterView.m in Sources */,
 				F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */,
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
