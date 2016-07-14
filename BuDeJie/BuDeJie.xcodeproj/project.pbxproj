@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A3DEE0E84C4FDD2EA50C24A0 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */; };
+		F30C10A61D37D21200D79EE1 /* JKAllTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10A51D37D21200D79EE1 /* JKAllTVC.m */; };
+		F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10A81D37D23800D79EE1 /* JKVideoTVC.m */; };
+		F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */; };
+		F30C10AF1D37D28000D79EE1 /* JKImageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */; };
+		F30C10B21D37D2A400D79EE1 /* JKWordTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */; };
 		F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */; };
 		F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ECA1D30D8D000F92A01 /* JKNavigationController.m */; };
 		F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ED11D30DA1E00F92A01 /* JKSettingTVC.m */; };
@@ -57,6 +62,16 @@
 		BCDAC0F33AE5C5BA75B0DFC6 /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3AF2C526D702F346E8E541 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		F30C10A41D37D21200D79EE1 /* JKAllTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAllTVC.h; sourceTree = "<group>"; };
+		F30C10A51D37D21200D79EE1 /* JKAllTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAllTVC.m; sourceTree = "<group>"; };
+		F30C10A71D37D23800D79EE1 /* JKVideoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKVideoTVC.h; sourceTree = "<group>"; };
+		F30C10A81D37D23800D79EE1 /* JKVideoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKVideoTVC.m; sourceTree = "<group>"; };
+		F30C10AA1D37D25E00D79EE1 /* JKVoiceTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKVoiceTVC.h; sourceTree = "<group>"; };
+		F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKVoiceTVC.m; sourceTree = "<group>"; };
+		F30C10AD1D37D28000D79EE1 /* JKImageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKImageTVC.h; sourceTree = "<group>"; };
+		F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKImageTVC.m; sourceTree = "<group>"; };
+		F30C10B01D37D2A400D79EE1 /* JKWordTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWordTVC.h; sourceTree = "<group>"; };
+		F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKWordTVC.m; sourceTree = "<group>"; };
 		F3239EC31D30A11C00F92A01 /* UIBarButtonItem+JKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JKItem.h"; sourceTree = "<group>"; };
 		F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JKItem.m"; sourceTree = "<group>"; };
 		F3239EC91D30D8D000F92A01 /* JKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNavigationController.h; sourceTree = "<group>"; };
@@ -355,6 +370,16 @@
 			children = (
 				F3C9FEDB1D2E80E1004BF32E /* JKHomeVC.h */,
 				F3C9FEDC1D2E80E1004BF32E /* JKHomeVC.m */,
+				F30C10A41D37D21200D79EE1 /* JKAllTVC.h */,
+				F30C10A51D37D21200D79EE1 /* JKAllTVC.m */,
+				F30C10A71D37D23800D79EE1 /* JKVideoTVC.h */,
+				F30C10A81D37D23800D79EE1 /* JKVideoTVC.m */,
+				F30C10AA1D37D25E00D79EE1 /* JKVoiceTVC.h */,
+				F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */,
+				F30C10AD1D37D28000D79EE1 /* JKImageTVC.h */,
+				F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */,
+				F30C10B01D37D2A400D79EE1 /* JKWordTVC.h */,
+				F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -696,12 +721,15 @@
 				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
 				F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */,
+				F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */,
 				F3BEBAF21D3640BD005405B9 /* JKThirdLoginBtn.m in Sources */,
+				F30C10B21D37D2A400D79EE1 /* JKWordTVC.m in Sources */,
 				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
 				F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */,
 				F3BEBB021D367290005405B9 /* JKSquareCell.m in Sources */,
 				F3C9FEF31D2E8F31004BF32E /* UIImage+JKRendering.m in Sources */,
+				F30C10AF1D37D28000D79EE1 /* JKImageTVC.m in Sources */,
 				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
 				F3BEBAEA1D363355005405B9 /* JKFastLoginView.m in Sources */,
 				F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */,
@@ -711,7 +739,9 @@
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
+				F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */,
 				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
+				F30C10A61D37D21200D79EE1 /* JKAllTVC.m in Sources */,
 				F3BEBAF91D365A91005405B9 /* JKSquareItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,6 @@
 //
 
 #import "JKSettingTVC.h"
-#import <SDImageCache.h>
 
 static NSString *settingCellID = @"settingCellID";
 
@@ -20,16 +19,12 @@ static NSString *settingCellID = @"settingCellID";
 @implementation JKSettingTVC
 
 #pragma mark -
-#pragma mark view cycle
+#pragma mark view life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 设置本页标题
     self.title = @"设置";
-    
-//    // 系统缓存路径
-//    NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
-//    self.cachePath = cachePath;
     
     // 注册cell重用标识
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:settingCellID];
@@ -42,11 +37,6 @@ static NSString *settingCellID = @"settingCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    // SDWebImage计算的缓存大小
-    NSInteger sizeSD = [[SDImageCache sharedImageCache] getSize];
-    JKLog(@"sizeSD--%ld", sizeSD)
-    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:settingCellID forIndexPath:indexPath];
     
@@ -71,6 +61,7 @@ static NSString *settingCellID = @"settingCellID";
 
 #pragma mark -
 #pragma mark 对缓存的操作
+/** 清除缓存 */
 - (void)cleanCaches {
     // 清除
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -93,13 +84,14 @@ static NSString *settingCellID = @"settingCellID";
         sizeStr = [NSString stringWithFormat:@"%@(%.1fKB)", sizeStr, sizeF];
     } else if (size > 0) {
         sizeStr = [NSString stringWithFormat:@"%@(%ldB)", sizeStr, size];
-    } 
+    }
     
     sizeStr = [sizeStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
     
     return sizeStr;
 }
 
+/** 求缓存大小 */
 - (NSInteger)getCacheSize {
     // 系统缓存路径
     NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];

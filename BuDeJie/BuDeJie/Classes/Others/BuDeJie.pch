@@ -17,6 +17,11 @@
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height
 
+#define navMaxY 64
+#define titleHeight 35
+#define titleMaxY (navMaxY + titleHeight)
+#define tabBarHeight 49
+
 #define iPhone4  (screenH == 480)
 #define iPhone5  (screenH == 568)
 #define iPhone6  (screenH == 667)
@@ -24,6 +29,8 @@
 
 
 #define colorWith(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
+#define JKGlobeBackgroundColor colorWith(215,215,215)
+#define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:arc4random_uniform(255)/255.0]
 
 
 #define JKFunc JKLog(@"%@", __func__)
