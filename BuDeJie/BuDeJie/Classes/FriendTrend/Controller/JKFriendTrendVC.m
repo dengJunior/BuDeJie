@@ -12,6 +12,7 @@
 @implementation JKFriendTrendVC
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     
     [self setupNavigationItems];
 }

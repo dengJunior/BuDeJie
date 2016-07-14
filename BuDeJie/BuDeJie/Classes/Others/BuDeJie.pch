@@ -25,3 +25,15 @@
 
 #define colorWith(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
 
+
+#define JKFunc JKLog(@"%@", __func__)
+
+#ifdef DEBUG
+
+#define JKLog(...) NSLog(__VA_ARGS__);
+
+#else
+
+#define JKLog(...)
+
+#endif

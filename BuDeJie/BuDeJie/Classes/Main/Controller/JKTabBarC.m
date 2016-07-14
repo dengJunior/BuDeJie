@@ -105,6 +105,7 @@
 }
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     
     [self setupChildControllors];
     

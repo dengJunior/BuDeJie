@@ -11,6 +11,7 @@
 @implementation JKPublishVC
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor blueColor];
 }

@@ -103,7 +103,7 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        NSLog(@"%@", error);
+        JKLog(@"%@", error)
     }];
 }
 

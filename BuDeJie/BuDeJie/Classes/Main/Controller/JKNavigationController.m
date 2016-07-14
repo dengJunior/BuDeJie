@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     
+    [super viewDidLoad];
     // 定义一个pan手势，调用系统执行边缘返回的对象去执行系统的返回任务
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
     // 给pan手势设置代理，可以决定什么时候接受手势，避免假死
@@ -38,7 +39,7 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-//    NSLog(@"%@", self.interactivePopGestureRecognizer);
+//    JKLog(@"%@", self.interactivePopGestureRecognizer)
     // 设置返回按钮要在下一个控制器push出来之前
     if (self.childViewControllers.count > 0) {
         

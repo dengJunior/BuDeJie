@@ -38,7 +38,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-//    NSLog(@"%@", self.subviews);
+//    JKLog(@"%@", self.subviews)
     NSInteger count = 5;
     NSInteger i = 0;
     
@@ -55,7 +55,7 @@
             i ++;
         }
     }
-//    NSLog(@"%@", NSStringFromCGPoint(self.center));
+//    JKLog(@"%@", NSStringFromCGPoint(self.center))
 //    self.publishBtn.center = self.center; // self.center是以屏幕左上角为原点计算的
     self.publishBtn.center = CGPointMake(screenW * 0.5, height * 0.5);
 }

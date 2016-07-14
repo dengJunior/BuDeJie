@@ -33,6 +33,7 @@ static NSString *squareCellID = @"squareCellID";
 @implementation JKMeTVC
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     
     self.view.backgroundColor = colorWith(215, 215, 215);
     
@@ -90,7 +91,7 @@ static NSString *squareCellID = @"squareCellID";
         [self.collectionView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+        JKLog(@"%@", error)
     }];
 }
 
@@ -145,6 +146,12 @@ static NSString *squareCellID = @"squareCellID";
 /** 点击夜晚按钮 */
 - (void)night:(UIButton *)btn {
     btn.selected = !btn.selected;
+}
+
+#pragma mark -
+#pragma mark tableView delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark -
