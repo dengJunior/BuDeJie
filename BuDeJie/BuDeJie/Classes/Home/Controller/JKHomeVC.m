@@ -14,11 +14,14 @@
 #import "JKImageTVC.h"
 #import "JKWordTVC.h"
 
-@interface JKHomeVC ()
+@interface JKHomeVC ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, weak) UIButton *previousSelectedButton;
+@property (nonatomic, weak) UIScrollView *scrollView;
+@property (nonatomic, weak) UIView *titlesView;
 @property (nonatomic, weak) UIView *underLineView;
+@property (nonatomic, assign) CGFloat buttonW;
 
 @end
 
@@ -31,6 +34,9 @@
     
     NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     self.titles = titles;
+    
+    // 取消自动调整内边距
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self setupNavigationItems];
     
@@ -68,13 +74,21 @@
 
 /** 初始化子控件 */
 - (void)setupChildViews {
+    // 添加scrollView
+    [self setupScrollView];
+    // 添加标题栏
+    [self setupTitlesView];
+#warning 刚开启程序的时候下划线不出现
+    [self titleButtonClick:self.titlesView.subviews[0]];
+}
+/** 初始化scrollView */
+- (void)setupScrollView {
     // 子控制器个数
     NSInteger count = self.titles.count;
-    // 取消自动调整内边距
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    // 初始化scrollView
+    // 初始化一个屏幕大小的scrollView
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 设置代理
+    scrollView.delegate = self;
     // 背景色
     scrollView.backgroundColor = JKGlobeBackgroundColor;
     // 设置内容尺寸
@@ -86,9 +100,7 @@
     scrollView.showsHorizontalScrollIndicator = NO;
     // 添加
     [self.view addSubview:scrollView];
-    
-    // 添加标题栏
-    [self setupTitlesView];
+    self.scrollView = scrollView;
     
     // 添加子控制器的View
     for (NSInteger i = 0; i < count; i++) {
@@ -108,11 +120,13 @@
     // 标题栏颜色
     titlesView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     [self.view addSubview:titlesView];
+    self.titlesView = titlesView;
     
     // 标题个数
     NSInteger count = self.titles.count;
     // 所有标题按钮平分屏宽
     CGFloat buttonW = screenW / count;
+    self.buttonW = buttonW;
     
     // 添加标题按钮
     for (NSInteger i = 0; i < count; i++) {
@@ -153,8 +167,11 @@
         // 设置标题栏的下划线
         self.underLineView.width = button.titleLabel.width;
         self.underLineView.centerX = button.centerX;
-        // 滑动tableView
         
+        // 计算当前按钮的index
+        NSInteger index = [self.titlesView.subviews indexOfObject:button];
+        // 滑动tableView
+        self.scrollView.contentOffset = CGPointMake(index * screenW, self.scrollView.contentOffset.y);
     }];
     // 让当前按钮成为上一个选中按钮
     self.previousSelectedButton = button;
@@ -168,6 +185,15 @@
 /** 点击随机按钮 */
 - (void)random {
     
+}
+
+#pragma mark -
+#pragma mark scrollView delegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat offsetX = scrollView.contentOffset.x;
+    NSInteger index = offsetX / screenW;
+    [self titleButtonClick:self.titlesView.subviews[index]];
 }
 
 @end

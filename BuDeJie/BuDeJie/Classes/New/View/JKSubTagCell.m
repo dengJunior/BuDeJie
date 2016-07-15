@@ -26,10 +26,12 @@
     
     _titleLabel.text = subTagItem.theme_name;
     
-    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:subTagItem.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:kNilOptions completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    UIImage *placeholderImage = [UIImage circleImageWithOriginalImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:subTagItem.image_list] placeholderImage:placeholderImage options:kNilOptions completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
         // 如果URL没有图片，就用占位图片来裁剪
-        if (image == nil) image = [UIImage imageNamed:@"defaultUserIcon"];
+        if (image == nil) image = placeholderImage;
         // 用上下文裁剪方式设置图片圆角
         _iconImageView.image = [UIImage circleImageWithOriginalImage:image];
         
