@@ -13,6 +13,7 @@
 		F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */; };
 		F30C10AF1D37D28000D79EE1 /* JKImageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */; };
 		F30C10B21D37D2A400D79EE1 /* JKWordTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */; };
+		F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10DC1D39158800D79EE1 /* JKTitleButton.m */; };
 		F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */; };
 		F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ECA1D30D8D000F92A01 /* JKNavigationController.m */; };
 		F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ED11D30DA1E00F92A01 /* JKSettingTVC.m */; };
@@ -72,6 +73,8 @@
 		F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKImageTVC.m; sourceTree = "<group>"; };
 		F30C10B01D37D2A400D79EE1 /* JKWordTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWordTVC.h; sourceTree = "<group>"; };
 		F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKWordTVC.m; sourceTree = "<group>"; };
+		F30C10DB1D39158800D79EE1 /* JKTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTitleButton.h; sourceTree = "<group>"; };
+		F30C10DC1D39158800D79EE1 /* JKTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTitleButton.m; sourceTree = "<group>"; };
 		F3239EC31D30A11C00F92A01 /* UIBarButtonItem+JKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JKItem.h"; sourceTree = "<group>"; };
 		F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JKItem.m"; sourceTree = "<group>"; };
 		F3239EC91D30D8D000F92A01 /* JKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNavigationController.h; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 		F3C9FEC61D2E7CBD004BF32E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F30C10DB1D39158800D79EE1 /* JKTitleButton.h */,
+				F30C10DC1D39158800D79EE1 /* JKTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
 				F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */,
 				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
+				F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */,
 				F30C10A61D37D21200D79EE1 /* JKAllTVC.m in Sources */,
 				F3BEBAF91D365A91005405B9 /* JKSquareItem.m in Sources */,
 			);

@@ -33,7 +33,7 @@
 #define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:arc4random_uniform(255)/255.0]
 
 
-#define JKFunc JKLog(@"%@", __func__)
+#define JKFunc JKLog(@"%s", __func__)
 
 #ifdef DEBUG
 

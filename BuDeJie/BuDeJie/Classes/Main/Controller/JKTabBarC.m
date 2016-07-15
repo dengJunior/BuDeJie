@@ -52,7 +52,7 @@
     
     // 设置tabBar上的 首页 按钮
     JKHomeVC *homeVC = self.childViewControllers[0];
-    homeVC.tabBarItem.title = @"首页";
+    homeVC.tabBarItem.title = @"精华";
     homeVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
     homeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon" WithRendingMode:UIImageRenderingModeAlwaysOriginal];
     

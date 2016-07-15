@@ -18,6 +18,8 @@ static NSString *imageCellID = @"imageCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    JKFunc
+    
     self.tableView.contentInset = UIEdgeInsetsMake(titleMaxY, 0, tabBarHeight, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     

@@ -7,6 +7,7 @@
 //
 
 #import "JKHomeVC.h"
+#import "JKTitleButton.h"
 
 #import "JKAllTVC.h"
 #import "JKVideoTVC.h"
@@ -17,7 +18,7 @@
 @interface JKHomeVC ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray *titles;
-@property (nonatomic, weak) UIButton *previousSelectedButton;
+@property (nonatomic, weak) JKTitleButton *previousSelectedButton;
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, weak) UIView *titlesView;
 @property (nonatomic, weak) UIView *underLineView;
@@ -69,7 +70,6 @@
     [self addChildViewController:[[JKVoiceTVC alloc] init]];
     [self addChildViewController:[[JKImageTVC alloc] init]];
     [self addChildViewController:[[JKWordTVC alloc] init]];
-    
 }
 
 /** 初始化子控件 */
@@ -78,9 +78,8 @@
     [self setupScrollView];
     // 添加标题栏
     [self setupTitlesView];
-#warning 刚开启程序的时候下划线不出现
-    [self titleButtonClick:self.titlesView.subviews[0]];
 }
+
 /** 初始化scrollView */
 - (void)setupScrollView {
     // 子控制器个数
@@ -103,14 +102,29 @@
     self.scrollView = scrollView;
     
     // 添加子控制器的View
-    for (NSInteger i = 0; i < count; i++) {
-        // 获取每个子控制器的View
-        UIView *tableView = self.childViewControllers[i].view;
-        
-        // 注意：一定要将y设为0，因为默认会有一个20的向下偏移
-        tableView.frame = CGRectMake(i * screenW, 0, screenW, screenH);
-        [scrollView addSubview:tableView];
-    }
+//    for (NSInteger i = 0; i < count; i++) {
+//        // 获取每个子控制器的View
+//        UIView *tableView = self.childViewControllers[i].view;
+//        
+//        // 注意：一定要将y设为0，因为默认会有一个20的向下偏移
+//        tableView.frame = CGRectMake(i * screenW, 0, screenW, screenH);
+//        [scrollView addSubview:tableView];
+//    }
+    
+    // 加载第一个tableView
+    [self loadChildTableViewAtIndex:0];
+}
+
+/** 加载tableView(实现视图的懒加载) */
+- (void)loadChildTableViewAtIndex:(NSInteger)index {
+    
+    // 获取每个子控制器的View
+    UIView *tableView = self.childViewControllers[index].view;
+    if (tableView.superview) return;
+    // 注意：一定要将y设为0，因为默认会有一个20的向下偏移
+    tableView.frame = CGRectMake(index * screenW, 0, screenW, screenH);
+    [self.scrollView addSubview:tableView];
+    JKFunc
 }
 
 /** 初始化标题栏 */
@@ -131,14 +145,11 @@
     // 添加标题按钮
     for (NSInteger i = 0; i < count; i++) {
         // 创建按钮
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        JKTitleButton *button = [[JKTitleButton alloc] init];
         // 设置按钮文字
         [button setTitle:self.titles[i] forState:UIControlStateNormal];
         // 给按钮添加点击事件
         [button addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        // 设置按钮颜色
-        [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         
         // 添加按钮
         button.frame = CGRectMake(buttonW * i, 0, buttonW, titleHeight);
@@ -152,24 +163,34 @@
     underLineView.backgroundColor = [UIColor redColor];
     [titlesView addSubview:underLineView];
     self.underLineView = underLineView;
+    
+    // 初始化时第一个按钮为选中状态，下划线出现在第一个按钮下面
+    JKTitleButton *firstButton = titlesView.subviews[0];
+    firstButton.selected = YES;
+    self.previousSelectedButton = firstButton;
+    [firstButton.titleLabel sizeToFit];
+    underLineView.width = firstButton.titleLabel.width +10;
+    underLineView.centerX = firstButton.centerX;
 }
 
 #pragma mark -
 #pragma mark 事件处理
 /** 点击标题栏按钮 */
-- (void)titleButtonClick:(UIButton *)button {
+- (void)titleButtonClick:(JKTitleButton *)button {
     // 取消上个按钮的选中状态
     self.previousSelectedButton.selected = NO;
     // 设置当前按钮的选中状态
     button.selected = YES;
     
+    // 计算当前按钮的index
+    NSInteger index = [self.titlesView.subviews indexOfObject:button];
+    // 加载tableView
+    [self loadChildTableViewAtIndex:index];
+    
     [UIView animateWithDuration:0.25 animations:^{
         // 设置标题栏的下划线
-        self.underLineView.width = button.titleLabel.width;
+        self.underLineView.width = button.titleLabel.width +10;
         self.underLineView.centerX = button.centerX;
-        
-        // 计算当前按钮的index
-        NSInteger index = [self.titlesView.subviews indexOfObject:button];
         // 滑动tableView
         self.scrollView.contentOffset = CGPointMake(index * screenW, self.scrollView.contentOffset.y);
     }];
@@ -189,10 +210,13 @@
 
 #pragma mark -
 #pragma mark scrollView delegate
-
+/** scrollView停止时 */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    // 计算此时scrollView的X偏移
     CGFloat offsetX = scrollView.contentOffset.x;
+    // 计算此时页面索引
     NSInteger index = offsetX / screenW;
+    // 主动点击相应的标题按钮
     [self titleButtonClick:self.titlesView.subviews[index]];
 }
 
