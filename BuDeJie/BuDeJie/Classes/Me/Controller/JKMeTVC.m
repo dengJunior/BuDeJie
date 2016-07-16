@@ -32,6 +32,9 @@ static NSString *squareCellID = @"squareCellID";
 
 @implementation JKMeTVC
 
+#pragma mark -
+#pragma mark view life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -49,7 +52,9 @@ static NSString *squareCellID = @"squareCellID";
     [self loadData];
 }
 
-
+#pragma mark -
+#pragma mark 初始化
+/** 初始化导航条 */
 - (void)setupNavigationItems {
     
     self.navigationItem.title = @"我";
@@ -62,6 +67,39 @@ static NSString *squareCellID = @"squareCellID";
     
 }
 
+/** 初始化尾部collection控件 */
+- (void)setupFooterView {
+    // 设置流水布局
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(itemWH, itemWH);
+    layout.minimumLineSpacing = margin;
+    layout.minimumInteritemSpacing = margin;
+    // 设置frame
+    CGRect frame = CGRectMake(0, 0, screenW, 0);
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+    self.collectionView = collectionView;
+    
+    // 设置返回顶部
+    collectionView.scrollsToTop = NO;
+    
+    // 设置代理
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    
+    // 背景色
+    collectionView.backgroundColor = [UIColor clearColor];
+    
+    // 注册cell
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JKSquareCell" bundle:nil] forCellWithReuseIdentifier:squareCellID];
+    
+    // 设为tableView的尾部控件
+    self.tableView.tableFooterView = collectionView;
+    
+}
+
+#pragma mark -
+#pragma mark 网络请求相关操作
 /** 加载数据 */
 - (void)loadData {
     // 创建会话管理者
@@ -95,32 +133,6 @@ static NSString *squareCellID = @"squareCellID";
     }];
 }
 
-- (void)setupFooterView {
-    // 设置流水布局
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(itemWH, itemWH);
-    layout.minimumLineSpacing = margin;
-    layout.minimumInteritemSpacing = margin;
-    // 设置frame
-    CGRect frame = CGRectMake(0, 0, screenW, 0);
-    
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
-    self.collectionView = collectionView;
-    // 设置代理
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
-    
-    // 背景色
-    collectionView.backgroundColor = [UIColor clearColor];
-    
-    // 注册cell
-    [self.collectionView registerNib:[UINib nibWithNibName:@"JKSquareCell" bundle:nil] forCellWithReuseIdentifier:squareCellID];
-
-    // 设为tableView的尾部控件
-    self.tableView.tableFooterView = collectionView;
-    
-}
-
 /** 处理收到的模型，如果不是cols的整数倍数，则补齐 */
 - (NSMutableArray *)handleDataWithItems:(NSMutableArray *)items {
     // 最后一行的剩余的个数
@@ -136,7 +148,7 @@ static NSString *squareCellID = @"squareCellID";
 }
 
 #pragma mark -
-#pragma mark 点击事件
+#pragma mark 事件处理
 
 /** 点击设置按钮 */
 - (void)setting {

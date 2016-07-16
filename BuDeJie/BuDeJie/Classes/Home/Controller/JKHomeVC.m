@@ -18,11 +18,12 @@
 @interface JKHomeVC ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray *titles;
-@property (nonatomic, weak) JKTitleButton *previousSelectedButton;
 @property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, weak) UIView *titlesView;
 @property (nonatomic, weak) UIView *underLineView;
-@property (nonatomic, assign) CGFloat buttonW;
+
+@property (nonatomic, weak) JKTitleButton *previousSelectedButton;
+@property (nonatomic, weak) UITableView *previousShowedView;
 
 @end
 
@@ -86,6 +87,8 @@
     NSInteger count = self.titles.count;
     // 初始化一个屏幕大小的scrollView
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 关掉scrollView的返回顶部
+    scrollView.scrollsToTop = NO;
     // 设置代理
     scrollView.delegate = self;
     // 背景色
@@ -101,30 +104,8 @@
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
     
-    // 添加子控制器的View
-//    for (NSInteger i = 0; i < count; i++) {
-//        // 获取每个子控制器的View
-//        UIView *tableView = self.childViewControllers[i].view;
-//        
-//        // 注意：一定要将y设为0，因为默认会有一个20的向下偏移
-//        tableView.frame = CGRectMake(i * screenW, 0, screenW, screenH);
-//        [scrollView addSubview:tableView];
-//    }
-    
     // 加载第一个tableView
     [self loadChildTableViewAtIndex:0];
-}
-
-/** 加载tableView(实现视图的懒加载) */
-- (void)loadChildTableViewAtIndex:(NSInteger)index {
-    
-    // 获取每个子控制器的View
-    UIView *tableView = self.childViewControllers[index].view;
-    if (tableView.superview) return;
-    // 注意：一定要将y设为0，因为默认会有一个20的向下偏移
-    tableView.frame = CGRectMake(index * screenW, 0, screenW, screenH);
-    [self.scrollView addSubview:tableView];
-    JKFunc
 }
 
 /** 初始化标题栏 */
@@ -140,7 +121,6 @@
     NSInteger count = self.titles.count;
     // 所有标题按钮平分屏宽
     CGFloat buttonW = screenW / count;
-    self.buttonW = buttonW;
     
     // 添加标题按钮
     for (NSInteger i = 0; i < count; i++) {
@@ -173,6 +153,23 @@
     underLineView.centerX = firstButton.centerX;
 }
 
+/** 加载tableView(实现视图的懒加载) */
+- (void)loadChildTableViewAtIndex:(NSInteger)index {
+    
+    // 获取每个子控制器的tableView
+    UITableView *tableView = (UITableView *)self.childViewControllers[index].view;
+    
+    // 保证当前只有一个tableView的scrollToTop为YES，确保点击通知栏返回顶部功能可用
+    self.previousShowedView.scrollsToTop = NO;
+    tableView.scrollsToTop = YES;
+    self.previousShowedView = tableView;
+    
+    if (tableView.superview) return;
+    // 注意：一定要将y设为0，因为默认会有一个20的向下偏移
+    tableView.frame = CGRectMake(index * screenW, 0, screenW, screenH);
+    [self.scrollView addSubview:tableView];
+}
+
 #pragma mark -
 #pragma mark 事件处理
 /** 点击标题栏按钮 */
@@ -181,6 +178,8 @@
     self.previousSelectedButton.selected = NO;
     // 设置当前按钮的选中状态
     button.selected = YES;
+    // 让当前按钮成为上一个选中按钮
+    self.previousSelectedButton = button;
     
     // 计算当前按钮的index
     NSInteger index = [self.titlesView.subviews indexOfObject:button];
@@ -194,8 +193,6 @@
         // 滑动tableView
         self.scrollView.contentOffset = CGPointMake(index * screenW, self.scrollView.contentOffset.y);
     }];
-    // 让当前按钮成为上一个选中按钮
-    self.previousSelectedButton = button;
 }
 
 /** 点击游戏按钮 */
