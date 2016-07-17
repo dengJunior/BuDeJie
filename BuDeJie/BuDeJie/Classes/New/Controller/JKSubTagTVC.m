@@ -28,7 +28,7 @@ static NSString *subTagCellID = @"subTagCell";
     self.title = @"推荐标签";
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.view.backgroundColor = colorWith(215, 215, 215);
+    self.view.backgroundColor = JKColorWith(215, 215, 215);
     
     [self.tableView registerNib:[UINib nibWithNibName:@"JKSubTagCell" bundle:nil] forCellReuseIdentifier:subTagCellID];
     
@@ -46,7 +46,7 @@ static NSString *subTagCellID = @"subTagCell";
     parameters[@"c"] = @"topic";
     parameters[@"action"] = @"sub";
     
-    [manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *_Nullable responseObject) {
+    [manager GET:JKRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *_Nullable responseObject) {
         
         // 讲返回的字典数组转成模型数组
         NSArray *subTags = [JKSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];

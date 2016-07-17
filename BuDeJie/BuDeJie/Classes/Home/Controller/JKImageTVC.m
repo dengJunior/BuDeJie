@@ -23,7 +23,7 @@ static NSString *imageCellID = @"imageCellID";
     self.tableView.contentInset = UIEdgeInsetsMake(titleMaxY, 0, tabBarHeight, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
-    self.tableView.backgroundColor = randomColor;
+    self.tableView.backgroundColor = JKRandomColor;
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:imageCellID];
 }

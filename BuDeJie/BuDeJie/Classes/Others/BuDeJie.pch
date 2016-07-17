@@ -27,10 +27,24 @@
 #define iPhone6  (screenH == 667)
 #define iPhone6P (screenH == 736)
 
+// 请求数据的URL
+#define JKRequestURL @"http://api.budejie.com/api/api_open.php"
 
-#define colorWith(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
-#define JKGlobeBackgroundColor colorWith(215,215,215)
-#define randomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:arc4random_uniform(255)/255.0]
+
+/**
+ *  将名为responseObject的响应对象写到桌面上名为name的plist文件中
+ *
+ *  <p>提示：只能将前面出现的名为responseObject的对象写入文件 <p>
+ *
+ *  @param name 写入完成后文件名
+ *
+ */
+#define JKWriteResponseObjectToDesktopWithName(name) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/JOKER/Desktop/%@.plist", @#name] atomically:YES];
+
+
+#define JKColorWith(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
+#define JKGlobeBackgroundColor JKColorWith(215,215,215)
+#define JKRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:arc4random_uniform(255)/255.0]
 
 
 #define JKFunc JKLog(@"%s", __func__)

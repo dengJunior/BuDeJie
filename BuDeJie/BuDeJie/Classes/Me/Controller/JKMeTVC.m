@@ -38,7 +38,7 @@ static NSString *squareCellID = @"squareCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = colorWith(215, 215, 215);
+    self.view.backgroundColor = JKGlobeBackgroundColor;
     
     // 调整模块间的高度
     self.tableView.sectionHeaderHeight = 0;
@@ -104,14 +104,13 @@ static NSString *squareCellID = @"squareCellID";
 - (void)loadData {
     // 创建会话管理者
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
+
     // 参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"square";
     parameters[@"c"] = @"topic";
     
-    [manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
-        [responseObject writeToFile:@"/Users/JOKER/Desktop/list.plist" atomically:YES];
+    [manager GET:JKRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
         // 将响应回来的数据解析成模型数组
         NSMutableArray *squareItems = [JKSquareItem mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];

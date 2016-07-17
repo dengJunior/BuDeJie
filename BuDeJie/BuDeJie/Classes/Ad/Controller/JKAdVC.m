@@ -75,7 +75,7 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"code2"] = JKCode2;
     
-    [manager GET:@"http://mobads.baidu.com/cpro/ui/mads.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
+    [manager GET:JKRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
         // 用模型保存返回的数据
         JKADItem *adItem = [JKADItem mj_objectWithKeyValues:responseObject[@"ad"][0]];
