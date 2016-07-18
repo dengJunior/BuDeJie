@@ -15,6 +15,9 @@
 		F30C10B21D37D2A400D79EE1 /* JKWordTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */; };
 		F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10DC1D39158800D79EE1 /* JKTitleButton.m */; };
 		F30C10E01D3A1B8200D79EE1 /* JKTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10DF1D3A1B8200D79EE1 /* JKTopicItem.m */; };
+		F319130B1D3CEF4200A2295F /* JKConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F319130A1D3CEF4200A2295F /* JKConstant.m */; };
+		F31913141D3D0F5C00A2295F /* JKTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F31913131D3D0F5C00A2295F /* JKTopicCell.m */; };
+		F31913281D3D28D100A2295F /* JKTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F31913271D3D28D100A2295F /* JKTopicCell.xib */; };
 		F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */; };
 		F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ECA1D30D8D000F92A01 /* JKNavigationController.m */; };
 		F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3239ED11D30DA1E00F92A01 /* JKSettingTVC.m */; };
@@ -50,7 +53,6 @@
 		F3C9FEA91D2E709A004BF32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEA81D2E709A004BF32E /* main.m */; };
 		F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */; };
 		F3C9FEB41D2E709A004BF32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB31D2E709A004BF32E /* Assets.xcassets */; };
-		F3C9FEB71D2E709A004BF32E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */; };
 		F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FED91D2E806A004BF32E /* JKTabBarC.m */; };
 		F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEDC1D2E80E1004BF32E /* JKHomeVC.m */; };
 		F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C9FEDF1D2E8107004BF32E /* JKNewVC.m */; };
@@ -78,6 +80,11 @@
 		F30C10DC1D39158800D79EE1 /* JKTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTitleButton.m; sourceTree = "<group>"; };
 		F30C10DE1D3A1B8200D79EE1 /* JKTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicItem.h; sourceTree = "<group>"; };
 		F30C10DF1D3A1B8200D79EE1 /* JKTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicItem.m; sourceTree = "<group>"; };
+		F31913091D3CEF4200A2295F /* JKConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKConstant.h; sourceTree = "<group>"; };
+		F319130A1D3CEF4200A2295F /* JKConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKConstant.m; sourceTree = "<group>"; };
+		F31913121D3D0F5C00A2295F /* JKTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicCell.h; sourceTree = "<group>"; };
+		F31913131D3D0F5C00A2295F /* JKTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicCell.m; sourceTree = "<group>"; };
+		F31913271D3D28D100A2295F /* JKTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKTopicCell.xib; sourceTree = "<group>"; };
 		F3239EC31D30A11C00F92A01 /* UIBarButtonItem+JKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JKItem.h"; sourceTree = "<group>"; };
 		F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JKItem.m"; sourceTree = "<group>"; };
 		F3239EC91D30D8D000F92A01 /* JKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNavigationController.h; sourceTree = "<group>"; };
@@ -133,7 +140,6 @@
 		F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
 		F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		F3C9FEB31D2E709A004BF32E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3C9FEB61D2E709A004BF32E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3C9FEB81D2E709A004BF32E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		F3C9FED81D2E806A004BF32E /* JKTabBarC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTabBarC.h; sourceTree = "<group>"; };
 		F3C9FED91D2E806A004BF32E /* JKTabBarC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTabBarC.m; sourceTree = "<group>"; };
@@ -404,6 +410,9 @@
 			children = (
 				F30C10DB1D39158800D79EE1 /* JKTitleButton.h */,
 				F30C10DC1D39158800D79EE1 /* JKTitleButton.m */,
+				F31913121D3D0F5C00A2295F /* JKTopicCell.h */,
+				F31913131D3D0F5C00A2295F /* JKTopicCell.m */,
+				F31913271D3D28D100A2295F /* JKTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -563,7 +572,8 @@
 				F3C9FEED1D2E8BB5004BF32E /* category */,
 				F3C9FEAA1D2E709A004BF32E /* AppDelegate.h */,
 				F3C9FEAB1D2E709A004BF32E /* AppDelegate.m */,
-				F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */,
+				F31913091D3CEF4200A2295F /* JKConstant.h */,
+				F319130A1D3CEF4200A2295F /* JKConstant.m */,
 				F34252311D2FCF9000355741 /* BuDeJie.pch */,
 				F3C9FEB81D2E709A004BF32E /* Info.plist */,
 			);
@@ -652,8 +662,8 @@
 				F3BEBADE1D35F36B005405B9 /* JKLoginRegisterView.xib in Resources */,
 				F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */,
 				F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */,
-				F3C9FEB71D2E709A004BF32E /* LaunchScreen.storyboard in Resources */,
 				F3BEBAD21D35E3C0005405B9 /* JKLoginVC.xib in Resources */,
+				F31913281D3D28D100A2295F /* JKTopicCell.xib in Resources */,
 				F3BEBAD41D35E600005405B9 /* JKFriendTrendVC.xib in Resources */,
 				F3239EE61D30F30E00F92A01 /* LaunchImage-700@2x.png in Resources */,
 				F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -730,6 +740,7 @@
 				F3BEBAD11D35E3C0005405B9 /* JKLoginVC.m in Sources */,
 				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
+				F319130B1D3CEF4200A2295F /* JKConstant.m in Sources */,
 				F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */,
 				F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */,
 				F3BEBAF21D3640BD005405B9 /* JKThirdLoginBtn.m in Sources */,
@@ -747,6 +758,7 @@
 				F3BEBADC1D35F35E005405B9 /* JKLoginRegisterView.m in Sources */,
 				F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */,
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
+				F31913141D3D0F5C00A2295F /* JKTopicCell.m in Sources */,
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
 				F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */,
@@ -759,18 +771,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F3C9FEB51D2E709A004BF32E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3C9FEB61D2E709A004BF32E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F3C9FEB91D2E709A004BF32E /* Debug */ = {

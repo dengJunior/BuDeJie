@@ -29,5 +29,7 @@
 /** 转发数 */
 @property (nonatomic, assign) NSInteger repost;
 
+/** cell的类型 */
+@property (nonatomic, assign) NSInteger type;
 
 @end
