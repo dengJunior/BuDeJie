@@ -25,6 +25,8 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 
 /** cell的类型 */
 @property (nonatomic, assign) NSInteger type;
+/** 最热评论 */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 //--------------- cell顶部控件的数据 -------------------
 /** 用户头像 */

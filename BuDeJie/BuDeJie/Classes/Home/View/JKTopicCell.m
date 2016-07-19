@@ -28,6 +28,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+/** 最热评论 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtLabel;
+
 /** 声音类cell的中部视图 */
 @property (nonatomic, weak) JKMiddleVoiceView *middleVoiceView;
 
@@ -43,36 +47,6 @@
     }
     return _middleVoiceView;
 }
-
-//- (void)awakeFromNib {
-//    
-//    // 根据类型创建不同的middleView
-//    switch (self.topicItem.type) {
-//        case JKTopicStyleImage: {
-//            
-//            break;
-//        }
-//        case JKTopicStyleWord: {
-//            
-//            break;
-//        }
-//        case JKTopicStyleVoice: {
-//            UISwitch *sw = [[UISwitch alloc] init];
-//            [self.contentView addSubview:sw];
-////            JKMiddleVoiceView *middleVoiceView = [JKMiddleVoiceView voiceView];
-////            [self.contentView addSubview:middleVoiceView];
-////            middleVoiceView.topicItem = self.topicItem;
-////            self.middleVoiceView = middleVoiceView;
-//            break;
-//        }
-//        case JKTopicStyleVideo: {
-//            
-//            break;
-//        }
-//        default:
-//            break;
-//    }
-//}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -93,6 +67,18 @@
     [self setButton:_hateButton num:topicItem.hate];
     [self setButton:_repostButton num:topicItem.repost];
     [self setButton:_commentButton num:topicItem.comment];
+    
+    if (topicItem.top_cmt.count) {
+        _topCmtView.hidden = NO;
+        NSString *cmtName = topicItem.top_cmt[0][@"user"][@"username"];
+        NSString *cmtContent = topicItem.top_cmt[0][@"content"];
+        if (cmtContent.length == 0) {
+            cmtContent = @"【声音评论】";
+        }
+        _topCmtLabel.text = [NSString stringWithFormat:@"%@:%@", cmtName, cmtContent];
+    } else {
+        _topCmtView.hidden = YES;
+    }
 }
 
 - (void)setFrame:(CGRect)frame {

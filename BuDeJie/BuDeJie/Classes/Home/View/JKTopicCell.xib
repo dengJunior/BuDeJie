@@ -161,10 +161,39 @@
                             <constraint firstAttribute="height" constant="1" id="lkq-DX-CJU"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5o-EK-LWY">
+                        <rect key="frame" x="10" y="229" width="300" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-5K-O6M">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZq-Tr-vSm">
+                                <rect key="frame" x="0.0" y="18" width="300" height="67"/>
+                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Labe</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qZq-Tr-vSm" secondAttribute="trailing" id="1Ft-yR-vL1"/>
+                            <constraint firstItem="c6d-5K-O6M" firstAttribute="leading" secondItem="L5o-EK-LWY" secondAttribute="leading" id="7ga-WY-icd"/>
+                            <constraint firstItem="c6d-5K-O6M" firstAttribute="top" secondItem="L5o-EK-LWY" secondAttribute="top" id="Y5d-Vk-Hrg"/>
+                            <constraint firstItem="qZq-Tr-vSm" firstAttribute="top" secondItem="c6d-5K-O6M" secondAttribute="bottom" id="ZuS-fU-Bzp"/>
+                            <constraint firstAttribute="bottom" secondItem="qZq-Tr-vSm" secondAttribute="bottom" id="a1V-8X-Wd0"/>
+                            <constraint firstItem="qZq-Tr-vSm" firstAttribute="leading" secondItem="L5o-EK-LWY" secondAttribute="leading" id="xTD-Me-zyb"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="PiZ-Ls-SeQ" firstAttribute="top" secondItem="uM9-RC-xt6" secondAttribute="bottom" id="326-MY-mci"/>
                     <constraint firstItem="uM9-RC-xt6" firstAttribute="leading" secondItem="8qv-cU-rKs" secondAttribute="leading" id="459-WJ-qGq"/>
+                    <constraint firstItem="PiZ-Ls-SeQ" firstAttribute="top" secondItem="L5o-EK-LWY" secondAttribute="bottom" id="6vO-LI-XR4"/>
                     <constraint firstAttribute="bottom" secondItem="PiZ-Ls-SeQ" secondAttribute="bottom" id="Cko-Ix-zwV"/>
                     <constraint firstAttribute="trailing" secondItem="VeA-Au-i8c" secondAttribute="trailing" constant="10" id="EzJ-8f-SpP"/>
                     <constraint firstItem="bos-Cd-DvJ" firstAttribute="leading" secondItem="8qv-cU-rKs" secondAttribute="leading" id="Uf1-ts-l7O"/>
@@ -173,8 +202,10 @@
                     <constraint firstItem="VeA-Au-i8c" firstAttribute="top" secondItem="bos-Cd-DvJ" secondAttribute="bottom" id="bk0-We-4Ff"/>
                     <constraint firstItem="bos-Cd-DvJ" firstAttribute="top" secondItem="8qv-cU-rKs" secondAttribute="top" id="cb2-d9-XZk"/>
                     <constraint firstAttribute="trailing" secondItem="PiZ-Ls-SeQ" secondAttribute="trailing" id="gxa-Fk-kml"/>
+                    <constraint firstAttribute="trailing" secondItem="L5o-EK-LWY" secondAttribute="trailing" constant="10" id="jvr-V6-nU5"/>
                     <constraint firstAttribute="trailing" secondItem="bos-Cd-DvJ" secondAttribute="trailing" id="qM7-hf-SHv"/>
                     <constraint firstItem="PiZ-Ls-SeQ" firstAttribute="leading" secondItem="8qv-cU-rKs" secondAttribute="leading" id="wne-Dm-J0J"/>
+                    <constraint firstItem="L5o-EK-LWY" firstAttribute="leading" secondItem="8qv-cU-rKs" secondAttribute="leading" constant="10" id="zAN-9H-TkD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -186,8 +217,10 @@
                 <outlet property="profileImageView" destination="ImW-XO-4es" id="QOa-EJ-uMT"/>
                 <outlet property="repostButton" destination="A2k-we-LBK" id="EKj-s7-aHT"/>
                 <outlet property="text_label" destination="VeA-Au-i8c" id="ZcB-rh-eQo"/>
+                <outlet property="topCmtLabel" destination="qZq-Tr-vSm" id="X7M-wZ-IT9"/>
+                <outlet property="topCmtView" destination="L5o-EK-LWY" id="r6Q-OU-Tkf"/>
             </connections>
-            <point key="canvasLocation" x="306" y="264"/>
+            <point key="canvasLocation" x="213" y="261"/>
         </tableViewCell>
     </objects>
     <resources>

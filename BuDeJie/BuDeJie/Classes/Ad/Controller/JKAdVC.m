@@ -122,7 +122,7 @@
     // 时间初始为3秒
     static NSInteger time = 3;
     
-    time --;
+    time--;
     
     if (time == 0) {
         // 时间到后强制点击跳转按钮
