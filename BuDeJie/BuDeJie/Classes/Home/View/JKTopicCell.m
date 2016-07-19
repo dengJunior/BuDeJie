@@ -7,6 +7,8 @@
 //
 
 #import "JKTopicCell.h"
+#import "JKTopicItem.h"
+#import "JKMiddleVoiceView.h"
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
 
@@ -26,10 +28,58 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 
+/** 声音类cell的中部视图 */
+@property (nonatomic, weak) JKMiddleVoiceView *middleVoiceView;
 
 @end
 
 @implementation JKTopicCell
+
+- (JKMiddleVoiceView *)middleVoiceView {
+    if (!_middleVoiceView) {
+        JKMiddleVoiceView *middleVoiceView = [JKMiddleVoiceView voiceView];
+        [self.contentView addSubview:middleVoiceView];
+        _middleVoiceView = middleVoiceView;
+    }
+    return _middleVoiceView;
+}
+
+//- (void)awakeFromNib {
+//    
+//    // 根据类型创建不同的middleView
+//    switch (self.topicItem.type) {
+//        case JKTopicStyleImage: {
+//            
+//            break;
+//        }
+//        case JKTopicStyleWord: {
+//            
+//            break;
+//        }
+//        case JKTopicStyleVoice: {
+//            UISwitch *sw = [[UISwitch alloc] init];
+//            [self.contentView addSubview:sw];
+////            JKMiddleVoiceView *middleVoiceView = [JKMiddleVoiceView voiceView];
+////            [self.contentView addSubview:middleVoiceView];
+////            middleVoiceView.topicItem = self.topicItem;
+////            self.middleVoiceView = middleVoiceView;
+//            break;
+//        }
+//        case JKTopicStyleVideo: {
+//            
+//            break;
+//        }
+//        default:
+//            break;
+//    }
+//}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.middleVoiceView.frame = self.topicItem.middleFrame;
+    self.middleVoiceView.topicItem = self.topicItem;
+}
 
 - (void)setTopicItem:(JKTopicItem *)topicItem {
     _topicItem = topicItem;

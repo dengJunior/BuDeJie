@@ -8,9 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, JKTopicStyle) {
+    /** 全部 */
+    JKTopicStyleAll = 1,            
+    /** 图片 */
+    JKTopicStyleImage = 10,
+    /** 段子 */
+    JKTopicStyleWord = 29,
+    /** 音频 */
+    JKTopicStyleVoice = 31,
+    /** 视频 */
+    JKTopicStyleVideo = 41
+};
+
 @interface JKTopicItem : NSObject
 
-// profile_image, name, passtime, text, love, hate, comment, repost
+/** cell的类型 */
+@property (nonatomic, assign) NSInteger type;
+
+//--------------- cell顶部控件的数据 -------------------
 /** 用户头像 */
 @property (nonatomic, copy) NSString *profile_image;
 /** 用户昵称 */
@@ -20,6 +36,7 @@
 /** 状态的文字内容 */
 @property (nonatomic, copy) NSString *text;
 
+//--------------- cell底部操作栏数据 -------------------
 /** 顶数 */
 @property (nonatomic, assign) NSInteger love;
 /** 踩数 */
@@ -29,7 +46,31 @@
 /** 转发数 */
 @property (nonatomic, assign) NSInteger repost;
 
-/** cell的类型 */
-@property (nonatomic, assign) NSInteger type;
+//--------------- cell图片的宽高 -------------------
+/** cell中显示的图片的宽 */
+@property (nonatomic, assign) NSInteger width;
+/** cell中显示的图片的高 */
+@property (nonatomic, assign) NSInteger height;
+
+//--------------- 声音类cell的图片内容 -------------------
+// voicetime，playcount，image0，image1，image2
+/** 声音时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 小图地址 */
+@property (nonatomic, strong) NSString *image0;
+/** 大图地址 */
+@property (nonatomic, strong) NSString *image1;
+/** 中图地址 */
+@property (nonatomic, strong) NSString *image2;
+
+
+
+//--------------- 非获取数据 -------------------
+/** 显示本模型数据的cell的高度 */
+@property (nonatomic, assign) CGFloat cellHeight;
+/** cell中间图片的frame */
+@property (nonatomic, assign) CGRect middleFrame;
 
 @end

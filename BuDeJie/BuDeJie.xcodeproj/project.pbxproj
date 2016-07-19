@@ -32,6 +32,8 @@
 		F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */; };
 		F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522B1D2F8CE300355741 /* JKTabBar.m */; };
 		F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522E1D2FCD3800355741 /* UIView+JKFrame.m */; };
+		F359D9161D3E46A4001146C5 /* JKMiddleVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F359D9151D3E46A4001146C5 /* JKMiddleVoiceView.m */; };
+		F359D9181D3E46D4001146C5 /* JKMiddleVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F359D9171D3E46D4001146C5 /* JKMiddleVoiceView.xib */; };
 		F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC11D35142A005405B9 /* JKADItem.m */; };
 		F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC41D351F4D005405B9 /* JKSubTagTVC.m */; };
 		F3BEBAC81D35238D005405B9 /* JKSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC71D35238D005405B9 /* JKSubTagItem.m */; };
@@ -106,6 +108,9 @@
 		F342522D1D2FCD3800355741 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKFrame.h"; sourceTree = "<group>"; };
 		F342522E1D2FCD3800355741 /* UIView+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKFrame.m"; sourceTree = "<group>"; };
 		F34252311D2FCF9000355741 /* BuDeJie.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
+		F359D9141D3E46A4001146C5 /* JKMiddleVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMiddleVoiceView.h; sourceTree = "<group>"; };
+		F359D9151D3E46A4001146C5 /* JKMiddleVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMiddleVoiceView.m; sourceTree = "<group>"; };
+		F359D9171D3E46D4001146C5 /* JKMiddleVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKMiddleVoiceView.xib; sourceTree = "<group>"; };
 		F3BEBAC01D35142A005405B9 /* JKADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKADItem.h; sourceTree = "<group>"; };
 		F3BEBAC11D35142A005405B9 /* JKADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKADItem.m; sourceTree = "<group>"; };
 		F3BEBAC31D351F4D005405B9 /* JKSubTagTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSubTagTVC.h; sourceTree = "<group>"; };
@@ -413,6 +418,9 @@
 				F31913121D3D0F5C00A2295F /* JKTopicCell.h */,
 				F31913131D3D0F5C00A2295F /* JKTopicCell.m */,
 				F31913271D3D28D100A2295F /* JKTopicCell.xib */,
+				F359D9141D3E46A4001146C5 /* JKMiddleVoiceView.h */,
+				F359D9151D3E46A4001146C5 /* JKMiddleVoiceView.m */,
+				F359D9171D3E46D4001146C5 /* JKMiddleVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -661,6 +669,7 @@
 				F3239EDB1D30EFC000F92A01 /* JKAdVC.xib in Resources */,
 				F3BEBADE1D35F36B005405B9 /* JKLoginRegisterView.xib in Resources */,
 				F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */,
+				F359D9181D3E46D4001146C5 /* JKMiddleVoiceView.xib in Resources */,
 				F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */,
 				F3BEBAD21D35E3C0005405B9 /* JKLoginVC.xib in Resources */,
 				F31913281D3D28D100A2295F /* JKTopicCell.xib in Resources */,
@@ -764,6 +773,7 @@
 				F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */,
 				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
 				F30C10E01D3A1B8200D79EE1 /* JKTopicItem.m in Sources */,
+				F359D9161D3E46A4001146C5 /* JKMiddleVoiceView.m in Sources */,
 				F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */,
 				F30C10A61D37D21200D79EE1 /* JKAllTVC.m in Sources */,
 				F3BEBAF91D365A91005405B9 /* JKSquareItem.m in Sources */,

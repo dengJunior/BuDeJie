@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JKSubTagItem.h"
+@class JKSubTagItem;
 
 @interface JKSubTagCell : UITableViewCell
 

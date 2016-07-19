@@ -19,7 +19,7 @@ static NSString *const allCellID = @"allCellID";
 @interface JKAllTVC ()
 
 /** 模型数组 */
-@property (nonatomic, strong) NSMutableArray *topicItems;
+@property (nonatomic, strong) NSMutableArray <JKTopicItem *> *topicItems;
 /** AFN会话管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 /** 是否正在加载新数据 */
@@ -34,7 +34,7 @@ static NSString *const allCellID = @"allCellID";
 @property (nonatomic, weak) UILabel *headerLabel;
 
 /** cell的类型 */
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) JKTopicStyle type;
 
 @end
 
@@ -47,25 +47,32 @@ static NSString *const allCellID = @"allCellID";
     }
     return _manager;
 }
+- (JKTopicStyle)type {
+    return JKTopicStyleVoice;
+}
 
 #pragma mark -
 #pragma mark view life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.type = 1;
-//    self.tableView.rowHeight = 200;
+    
+    // 估计高度
+    self.tableView.estimatedRowHeight = 200;
+    // 取消系统的分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"JKTopicCell" bundle:nil] forCellReuseIdentifier:allCellID];
     
+    // 设置内容和滚动条的内边距
     self.tableView.contentInset = UIEdgeInsetsMake(titleMaxY, 0, tabBarHeight, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    // 背景颜色
+    self.tableView.backgroundColor = JKGlobeBackgroundColor;
     
-    self.tableView.backgroundColor = JKRandomColor;
-    
+    // 设置刷新控件
     [self setupRefreshViews];
-    
+    // 下拉刷新
     [self headerBeginRefreshing];
 }
 
@@ -146,7 +153,7 @@ static NSString *const allCellID = @"allCellID";
     [self.manager GET:JKRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 设置获取个多数据时的参数
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        
+        JKWriteResponseObjectToDesktopWithName(image_topic)
         NSMutableArray *topicItems = [JKTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         // 模型属性赋值
@@ -281,17 +288,9 @@ static NSString *const allCellID = @"allCellID";
 #pragma mark -
 #pragma mark TableView delegate 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    JKLog(@"%s---%ld", __func__, indexPath.row)
     
-    CGFloat cellHeight = 0;
-    cellHeight += 55;
-    
-    JKTopicItem *topicItem = self.topicItems[indexPath.row];
-    CGSize maxSize = CGSizeMake(screenW - 2 * JKMargin, MAXFLOAT);
-    cellHeight += [topicItem.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
-    
-    cellHeight += 35 + 2 *JKMargin;
-    
-    return cellHeight;
+    return self.topicItems[indexPath.row].cellHeight;
 }
 
 

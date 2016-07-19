@@ -7,6 +7,7 @@
 //
 
 #import "JKSubTagCell.h"
+#import "JKSubTagItem.h"
 #import <UIImageView+WebCache.h>
 
 @interface JKSubTagCell ()
