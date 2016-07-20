@@ -289,7 +289,6 @@ static NSString *const allCellID = @"allCellID";
 #pragma mark -
 #pragma mark TableView delegate 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    JKLog(@"%s---%ld", __func__, indexPath.row)
     
     return self.topicItems[indexPath.row].cellHeight;
 }

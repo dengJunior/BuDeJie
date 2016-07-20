@@ -30,7 +30,7 @@
         CGFloat middleH = middleW / self.width * self.height;
         if (middleH > 520) {
             _bigImageH = middleH;
-            middleH = 200;
+            middleH = 300;
         }
         _middleFrame = CGRectMake(middleX, middleY, middleW, middleH);
         
