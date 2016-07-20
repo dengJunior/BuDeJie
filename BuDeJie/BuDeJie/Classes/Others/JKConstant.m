@@ -26,3 +26,7 @@ CGFloat const JKMargin = 10;
 /** 请求数据的URL */
 NSString *const JKRequestURL = @"http://api.budejie.com/api/api_open.php";
 
+/** 请求数据的URL */
+NSString *const JKTabBarButtonReclickedNotification = @"JKTabBarButtonReclickedNotification";
+
+

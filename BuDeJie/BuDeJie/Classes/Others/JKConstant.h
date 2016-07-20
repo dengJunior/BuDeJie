@@ -20,3 +20,6 @@ UIKIT_EXTERN CGFloat const JKMargin;
 
 UIKIT_EXTERN NSString *const JKRequestURL;
 
+
+UIKIT_EXTERN NSString *const JKTabBarButtonReclickedNotification;
+

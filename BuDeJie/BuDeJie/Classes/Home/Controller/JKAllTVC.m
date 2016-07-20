@@ -74,6 +74,33 @@ static NSString *const allCellID = @"allCellID";
     [self setupRefreshViews];
     // 下拉刷新
     [self headerBeginRefreshing];
+    
+    // 设置通知
+    [self setupNotification];
+}
+
+- (void)dealloc {
+    // 移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark -
+#pragma mark 通知
+- (void)setupNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonReclicked) name:JKTabBarButtonReclickedNotification object:nil];
+}
+
+#pragma mark -
+#pragma mark 事件处理
+- (void)tabBarButtonReclicked {
+    
+    // 如果当前显示的不是精华页面(本控制器的界面不在窗口上) -> return
+    if (self.tableView.window == nil) return;
+    // 如果精华页面显示的不是本控制器的View(当前控制器的界面不在屏幕中间) -> return
+    if (self.tableView.scrollsToTop == NO) return;
+    
+    // 开始下拉刷新
+    [self headerBeginRefreshing];
 }
 
 #pragma mark -
@@ -204,6 +231,10 @@ static NSString *const allCellID = @"allCellID";
         UIEdgeInsets insets = self.tableView.contentInset;
         insets.top = titleMaxY + self.headerLabel.height;
         self.tableView.contentInset = insets;
+        
+        CGPoint offset = self.tableView.contentOffset;
+        offset.y = - insets.top;
+        self.tableView.contentOffset = offset;
     }];
     [self loadNewData];
 }
