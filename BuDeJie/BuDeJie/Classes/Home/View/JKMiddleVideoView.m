@@ -1,28 +1,27 @@
 //
-//  JKMiddleVoiceView.m
+//  JKMiddleVideoView.m
 //  BuDeJie
 //
-//  Created by Joker on 16/7/19.
+//  Created by Joker on 16/7/20.
 //  Copyright © 2016年 Joker. All rights reserved.
 //
 
-#import "JKMiddleVoiceView.h"
+#import "JKMiddleVideoView.h"
 #import "JKTopicItem.h"
-#import <UIImageView+WebCache.h>
 #import <SDImageCache.h>
+#import <UIImageView+WebCache.h>
 #import <AFNetworkReachabilityManager.h>
 
-@interface JKMiddleVoiceView ()
-
+@interface JKMiddleVideoView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
 
 @end
 
-@implementation JKMiddleVoiceView
+@implementation JKMiddleVideoView
 
-+ (instancetype)voiceView {
++ (instancetype)videoView {
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:kNilOptions][0];
 }
 
@@ -30,7 +29,7 @@
     _topicItem = topicItem;
     
     // 设置显示的图片
-//    [_imageView sd_setImageWithURL:[NSURL URLWithString:topicItem.image0]];
+//    [_imageView sd_setImageWithURL:[NSURL URLWithString:topicItem.cdn_img]];
     // 初始化
     _imageView.image = nil;
     
@@ -71,7 +70,8 @@
     _playcountLabel.text = playcountStr;
     
     // 设置音频时长
-    _voicetimeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", _topicItem.voicetime / 60, _topicItem.voicetime % 60];
+    _videotimeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", _topicItem.videotime / 60, _topicItem.videotime % 60];
 }
+
 
 @end

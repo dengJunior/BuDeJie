@@ -162,7 +162,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5o-EK-LWY">
-                        <rect key="frame" x="10" y="229" width="300" height="85"/>
+                        <rect key="frame" x="10" y="219" width="300" height="95"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-5K-O6M">
                                 <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
@@ -173,19 +173,19 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZq-Tr-vSm">
                                 <rect key="frame" x="0.0" y="18" width="300" height="67"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Labe</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qZq-Tr-vSm" secondAttribute="trailing" id="1Ft-yR-vL1"/>
                             <constraint firstItem="c6d-5K-O6M" firstAttribute="leading" secondItem="L5o-EK-LWY" secondAttribute="leading" id="7ga-WY-icd"/>
                             <constraint firstItem="c6d-5K-O6M" firstAttribute="top" secondItem="L5o-EK-LWY" secondAttribute="top" id="Y5d-Vk-Hrg"/>
                             <constraint firstItem="qZq-Tr-vSm" firstAttribute="top" secondItem="c6d-5K-O6M" secondAttribute="bottom" id="ZuS-fU-Bzp"/>
-                            <constraint firstAttribute="bottom" secondItem="qZq-Tr-vSm" secondAttribute="bottom" id="a1V-8X-Wd0"/>
+                            <constraint firstAttribute="bottom" secondItem="qZq-Tr-vSm" secondAttribute="bottom" constant="10" id="a1V-8X-Wd0"/>
                             <constraint firstItem="qZq-Tr-vSm" firstAttribute="leading" secondItem="L5o-EK-LWY" secondAttribute="leading" id="xTD-Me-zyb"/>
                         </constraints>
                     </view>

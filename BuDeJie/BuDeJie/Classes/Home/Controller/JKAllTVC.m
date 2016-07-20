@@ -48,7 +48,7 @@ static NSString *const allCellID = @"allCellID";
     return _manager;
 }
 - (JKTopicStyle)type {
-    return JKTopicStyleVoice;
+    return JKTopicStyleAll;
 }
 
 #pragma mark -
@@ -153,7 +153,8 @@ static NSString *const allCellID = @"allCellID";
     [self.manager GET:JKRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 设置获取个多数据时的参数
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        JKWriteResponseObjectToDesktopWithName(image_topic)
+        
+//        JKWriteResponseObjectToDesktopWithName(topic_topic)
         NSMutableArray *topicItems = [JKTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         // 模型属性赋值

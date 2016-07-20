@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+/** 状态的类型 */
 typedef NS_ENUM(NSUInteger, JKTopicStyle) {
     /** 全部 */
     JKTopicStyleAll = 1,            
@@ -24,7 +25,7 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 @interface JKTopicItem : NSObject
 
 /** cell的类型 */
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) JKTopicStyle type;
 /** 最热评论 */
 @property (nonatomic, strong) NSArray *top_cmt;
 
@@ -54,12 +55,7 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 /** cell中显示的图片的高 */
 @property (nonatomic, assign) NSInteger height;
 
-//--------------- 声音类cell的图片内容 -------------------
-// voicetime，playcount，image0，image1，image2
-/** 声音时长 */
-@property (nonatomic, assign) NSInteger voicetime;
-/** 播放次数 */
-@property (nonatomic, assign) NSInteger playcount;
+//--------------- cell中间的图片 -------------------
 /** 小图地址 */
 @property (nonatomic, strong) NSString *image0;
 /** 大图地址 */
@@ -67,6 +63,18 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 /** 中图地址 */
 @property (nonatomic, strong) NSString *image2;
 
+//--------------- 声音类cell的图片内容 -------------------
+// voicetime，playcount，image0，image1，image2
+/** 声音时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+
+//--------------- 视频类cell的图片内容 -------------------
+/** 视频时长 */
+@property (nonatomic, assign) NSInteger videotime;
+/** 视频加载时候的静态显示的图片 */
+@property (nonatomic, copy) NSString *cdn_img;
 
 
 //--------------- 非获取数据 -------------------
@@ -74,5 +82,7 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 @property (nonatomic, assign) CGFloat cellHeight;
 /** cell中间图片的frame */
 @property (nonatomic, assign) CGRect middleFrame;
+/** 超长图片在查看大图时的高度 */
+@property (nonatomic, assign) CGFloat bigImageH;
 
 @end

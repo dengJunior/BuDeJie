@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OrQ-W5-yD2" customClass="JKMiddleVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xMx-xx-0QF">
+                    <rect key="frame" x="0.0" y="0.0" width="333" height="206"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-AS-n8k">
+                    <rect key="frame" x="300" y="190" width="33" height="16"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6u-Io-rEf">
+                    <rect key="frame" x="131" y="67" width="71" height="71"/>
+                    <state key="normal" image="video-play"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgL-hC-i4A">
+                    <rect key="frame" x="295" y="0.0" width="38" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="y4c-AS-n8k" secondAttribute="bottom" id="2Ld-dv-E84"/>
+                <constraint firstItem="xMx-xx-0QF" firstAttribute="leading" secondItem="OrQ-W5-yD2" secondAttribute="leading" id="3vb-Ro-dkC"/>
+                <constraint firstItem="W6u-Io-rEf" firstAttribute="centerX" secondItem="OrQ-W5-yD2" secondAttribute="centerX" id="4VI-lP-oQV"/>
+                <constraint firstItem="xMx-xx-0QF" firstAttribute="top" secondItem="OrQ-W5-yD2" secondAttribute="top" id="HIK-Cz-vgQ"/>
+                <constraint firstItem="W6u-Io-rEf" firstAttribute="centerY" secondItem="OrQ-W5-yD2" secondAttribute="centerY" id="RNm-St-Dhy"/>
+                <constraint firstAttribute="bottom" secondItem="xMx-xx-0QF" secondAttribute="bottom" id="SbF-OQ-AWW"/>
+                <constraint firstItem="HgL-hC-i4A" firstAttribute="top" secondItem="OrQ-W5-yD2" secondAttribute="top" id="Z0b-E4-JXo"/>
+                <constraint firstAttribute="trailing" secondItem="HgL-hC-i4A" secondAttribute="trailing" id="ZjR-d8-50k"/>
+                <constraint firstAttribute="trailing" secondItem="y4c-AS-n8k" secondAttribute="trailing" id="a1s-N0-85k"/>
+                <constraint firstAttribute="trailing" secondItem="xMx-xx-0QF" secondAttribute="trailing" id="nmk-cW-hFA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="xMx-xx-0QF" id="jdi-Ly-fKD"/>
+                <outlet property="playcountLabel" destination="HgL-hC-i4A" id="dXZ-Tc-PUb"/>
+                <outlet property="videotimeLabel" destination="y4c-AS-n8k" id="3TZ-Uz-dHi"/>
+            </connections>
+            <point key="canvasLocation" x="294.5" y="330"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>

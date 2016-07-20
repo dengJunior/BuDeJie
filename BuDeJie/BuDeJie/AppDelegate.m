@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JKAdVC.h"
 #import "JKTabBarC.h"
+#import <AFNetworkReachabilityManager.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 监控当前网络状态
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
