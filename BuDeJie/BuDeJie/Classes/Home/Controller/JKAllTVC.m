@@ -48,7 +48,7 @@ static NSString *const allCellID = @"allCellID";
     return _manager;
 }
 - (JKTopicStyle)type {
-    return JKTopicStyleAll;
+    return JKTopicStylePicture;
 }
 
 #pragma mark -

@@ -13,7 +13,7 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
     /** 全部 */
     JKTopicStyleAll = 1,            
     /** 图片 */
-    JKTopicStyleImage = 10,
+    JKTopicStylePicture = 10,
     /** 段子 */
     JKTopicStyleWord = 29,
     /** 音频 */
@@ -49,13 +49,13 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 /** 转发数 */
 @property (nonatomic, assign) NSInteger repost;
 
-//--------------- cell图片的宽高 -------------------
+//--------------- cell的图片 -------------------
+/** 是否是gif动画 */
+@property (nonatomic, assign) BOOL is_gif;
 /** cell中显示的图片的宽 */
 @property (nonatomic, assign) NSInteger width;
 /** cell中显示的图片的高 */
 @property (nonatomic, assign) NSInteger height;
-
-//--------------- cell中间的图片 -------------------
 /** 小图地址 */
 @property (nonatomic, strong) NSString *image0;
 /** 大图地址 */
@@ -82,7 +82,7 @@ typedef NS_ENUM(NSUInteger, JKTopicStyle) {
 @property (nonatomic, assign) CGFloat cellHeight;
 /** cell中间图片的frame */
 @property (nonatomic, assign) CGRect middleFrame;
-/** 超长图片在查看大图时的高度 */
-@property (nonatomic, assign) CGFloat bigImageH;
+/** 是否超长图片 */
+@property (nonatomic, assign, getter=isLongImage) BOOL longImage;
 
 @end

@@ -34,8 +34,11 @@
 		F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522E1D2FCD3800355741 /* UIView+JKFrame.m */; };
 		F34AEAD41D3F09E60091EC36 /* JKMiddleVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAD31D3F09E60091EC36 /* JKMiddleVideoView.m */; };
 		F34AEAD61D3F0A000091EC36 /* JKMiddleVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34AEAD51D3F0A000091EC36 /* JKMiddleVideoView.xib */; };
-		F34AEAD91D3F0DC50091EC36 /* JKMiddleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAD81D3F0DC50091EC36 /* JKMiddleImageView.m */; };
-		F34AEADB1D3F0DD10091EC36 /* JKMiddleImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34AEADA1D3F0DD10091EC36 /* JKMiddleImageView.xib */; };
+		F34AEAD91D3F0DC50091EC36 /* JKMiddlePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAD81D3F0DC50091EC36 /* JKMiddlePictureView.m */; };
+		F34AEADB1D3F0DD10091EC36 /* JKMiddlePictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34AEADA1D3F0DD10091EC36 /* JKMiddlePictureView.xib */; };
+		F34BDB031D40ECBC008B573B /* UIImageView+JKDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = F34BDB021D40ECBC008B573B /* UIImageView+JKDownload.m */; };
+		F34BDB071D40FD12008B573B /* JKBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34BDB051D40FD12008B573B /* JKBigPictureViewController.m */; };
+		F34BDB081D40FD12008B573B /* JKBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34BDB061D40FD12008B573B /* JKBigPictureViewController.xib */; };
 		F359D9161D3E46A4001146C5 /* JKMiddleVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F359D9151D3E46A4001146C5 /* JKMiddleVoiceView.m */; };
 		F359D9181D3E46D4001146C5 /* JKMiddleVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F359D9171D3E46D4001146C5 /* JKMiddleVoiceView.xib */; };
 		F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BEBAC11D35142A005405B9 /* JKADItem.m */; };
@@ -115,9 +118,14 @@
 		F34AEAD21D3F09E60091EC36 /* JKMiddleVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMiddleVideoView.h; sourceTree = "<group>"; };
 		F34AEAD31D3F09E60091EC36 /* JKMiddleVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMiddleVideoView.m; sourceTree = "<group>"; };
 		F34AEAD51D3F0A000091EC36 /* JKMiddleVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKMiddleVideoView.xib; sourceTree = "<group>"; };
-		F34AEAD71D3F0DC50091EC36 /* JKMiddleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMiddleImageView.h; sourceTree = "<group>"; };
-		F34AEAD81D3F0DC50091EC36 /* JKMiddleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMiddleImageView.m; sourceTree = "<group>"; };
-		F34AEADA1D3F0DD10091EC36 /* JKMiddleImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKMiddleImageView.xib; sourceTree = "<group>"; };
+		F34AEAD71D3F0DC50091EC36 /* JKMiddlePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMiddlePictureView.h; sourceTree = "<group>"; };
+		F34AEAD81D3F0DC50091EC36 /* JKMiddlePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMiddlePictureView.m; sourceTree = "<group>"; };
+		F34AEADA1D3F0DD10091EC36 /* JKMiddlePictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKMiddlePictureView.xib; sourceTree = "<group>"; };
+		F34BDB011D40ECBC008B573B /* UIImageView+JKDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKDownload.h"; sourceTree = "<group>"; };
+		F34BDB021D40ECBC008B573B /* UIImageView+JKDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKDownload.m"; sourceTree = "<group>"; };
+		F34BDB041D40FD12008B573B /* JKBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKBigPictureViewController.h; sourceTree = "<group>"; };
+		F34BDB051D40FD12008B573B /* JKBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKBigPictureViewController.m; sourceTree = "<group>"; };
+		F34BDB061D40FD12008B573B /* JKBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKBigPictureViewController.xib; sourceTree = "<group>"; };
 		F359D9141D3E46A4001146C5 /* JKMiddleVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKMiddleVoiceView.h; sourceTree = "<group>"; };
 		F359D9151D3E46A4001146C5 /* JKMiddleVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKMiddleVoiceView.m; sourceTree = "<group>"; };
 		F359D9171D3E46D4001146C5 /* JKMiddleVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKMiddleVoiceView.xib; sourceTree = "<group>"; };
@@ -407,6 +415,9 @@
 				F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */,
 				F30C10B01D37D2A400D79EE1 /* JKWordTVC.h */,
 				F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */,
+				F34BDB041D40FD12008B573B /* JKBigPictureViewController.h */,
+				F34BDB051D40FD12008B573B /* JKBigPictureViewController.m */,
+				F34BDB061D40FD12008B573B /* JKBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,9 +445,9 @@
 				F34AEAD21D3F09E60091EC36 /* JKMiddleVideoView.h */,
 				F34AEAD31D3F09E60091EC36 /* JKMiddleVideoView.m */,
 				F34AEAD51D3F0A000091EC36 /* JKMiddleVideoView.xib */,
-				F34AEAD71D3F0DC50091EC36 /* JKMiddleImageView.h */,
-				F34AEAD81D3F0DC50091EC36 /* JKMiddleImageView.m */,
-				F34AEADA1D3F0DD10091EC36 /* JKMiddleImageView.xib */,
+				F34AEAD71D3F0DC50091EC36 /* JKMiddlePictureView.h */,
+				F34AEAD81D3F0DC50091EC36 /* JKMiddlePictureView.m */,
+				F34AEADA1D3F0DD10091EC36 /* JKMiddlePictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +626,8 @@
 				F3239EC41D30A11C00F92A01 /* UIBarButtonItem+JKItem.m */,
 				F3BEBAE21D3631E6005405B9 /* JKLoginTextField.h */,
 				F3BEBAE31D3631E6005405B9 /* JKLoginTextField.m */,
+				F34BDB011D40ECBC008B573B /* UIImageView+JKDownload.h */,
+				F34BDB021D40ECBC008B573B /* UIImageView+JKDownload.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -681,10 +694,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34AEADB1D3F0DD10091EC36 /* JKMiddleImageView.xib in Resources */,
+				F34AEADB1D3F0DD10091EC36 /* JKMiddlePictureView.xib in Resources */,
 				F3BEBACD1D3523CB005405B9 /* JKSubTagCell.xib in Resources */,
 				F34AEAD61D3F0A000091EC36 /* JKMiddleVideoView.xib in Resources */,
 				F3239EDB1D30EFC000F92A01 /* JKAdVC.xib in Resources */,
+				F34BDB081D40FD12008B573B /* JKBigPictureViewController.xib in Resources */,
 				F3BEBADE1D35F36B005405B9 /* JKLoginRegisterView.xib in Resources */,
 				F3239EE51D30F30E00F92A01 /* LaunchImage-700-568h@2x.png in Resources */,
 				F359D9181D3E46D4001146C5 /* JKMiddleVoiceView.xib in Resources */,
@@ -768,6 +782,7 @@
 				F3BEBAD11D35E3C0005405B9 /* JKLoginVC.m in Sources */,
 				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
+				F34BDB071D40FD12008B573B /* JKBigPictureViewController.m in Sources */,
 				F319130B1D3CEF4200A2295F /* JKConstant.m in Sources */,
 				F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */,
 				F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */,
@@ -785,13 +800,14 @@
 				F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */,
 				F3BEBADC1D35F35E005405B9 /* JKLoginRegisterView.m in Sources */,
 				F3239ED21D30DA1E00F92A01 /* JKSettingTVC.m in Sources */,
+				F34BDB031D40ECBC008B573B /* UIImageView+JKDownload.m in Sources */,
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
 				F31913141D3D0F5C00A2295F /* JKTopicCell.m in Sources */,
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
 				F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */,
 				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
-				F34AEAD91D3F0DC50091EC36 /* JKMiddleImageView.m in Sources */,
+				F34AEAD91D3F0DC50091EC36 /* JKMiddlePictureView.m in Sources */,
 				F30C10E01D3A1B8200D79EE1 /* JKTopicItem.m in Sources */,
 				F359D9161D3E46A4001146C5 /* JKMiddleVoiceView.m in Sources */,
 				F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */,

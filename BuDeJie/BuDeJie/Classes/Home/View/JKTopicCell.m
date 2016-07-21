@@ -14,7 +14,7 @@
 
 #import "JKMiddleVoiceView.h"
 #import "JKMiddleVideoView.h"
-#import "JKMiddleImageView.h"
+#import "JKMiddlePictureView.h"
 
 @interface JKTopicCell ()
 
@@ -41,7 +41,7 @@
 /** 视频类cell的中部视图 */
 @property (nonatomic, weak) JKMiddleVideoView *middleVideoView;
 /** 图片类cell的中部视图 */
-@property (nonatomic, weak) JKMiddleImageView *middleImageView;
+@property (nonatomic, weak) JKMiddlePictureView *middleImageView;
 
 @end
 
@@ -68,9 +68,9 @@
     return _middleVideoView;
 }
 /** 中间图片控件的懒加载 */
-- (JKMiddleImageView *)middleImageView {
+- (JKMiddlePictureView *)middleImageView {
     if (!_middleImageView) {
-        JKMiddleImageView *middleImageView = [JKMiddleImageView imageView];
+        JKMiddlePictureView *middleImageView = [JKMiddlePictureView pictureView];
         middleImageView.autoresizingMask = UIViewAutoresizingNone;
         [self.contentView addSubview:middleImageView];
         _middleImageView = middleImageView;
@@ -101,7 +101,7 @@
             self.middleVoiceView.topicItem = self.topicItem;
             break;
         }
-        case JKTopicStyleImage: {
+        case JKTopicStylePicture: {
             self.middleVoiceView.hidden = YES;
             self.middleVideoView.hidden = YES;
             self.middleImageView.hidden = NO;

@@ -1,5 +1,5 @@
 //
-//  JKMiddleImageView.h
+//  JKMiddlePictureView.h
 //  BuDeJie
 //
 //  Created by Joker on 16/7/20.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 @class JKTopicItem;
 
-@interface JKMiddleImageView : UIView
+@interface JKMiddlePictureView : UIView
 
 /** 模型属性 */
 @property (nonatomic, strong) JKTopicItem *topicItem;
 
-+ (instancetype)imageView;
++ (instancetype)pictureView;
 
 @end

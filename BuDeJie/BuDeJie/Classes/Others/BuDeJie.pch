@@ -16,6 +16,9 @@
 
 #import "UIBarButtonItem+JKItem.h"
 
+#import "UIImageView+JKDownload.h"
+
+
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height
 

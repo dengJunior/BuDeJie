@@ -29,35 +29,7 @@
     _topicItem = topicItem;
     
     // 设置显示的图片
-//    [_imageView sd_setImageWithURL:[NSURL URLWithString:topicItem.cdn_img]];
-    // 初始化
-    _imageView.image = nil;
-    
-    SDImageCache *imageCache = [SDImageCache sharedImageCache];
-    UIImage *originImage = [imageCache imageFromDiskCacheForKey:topicItem.image1];
-    if (originImage) {
-        // 缓存中有大图，直接显示大图
-        _imageView.image = originImage;
-    } else {
-        // 缓存中没有大图
-        AFNetworkReachabilityStatus status =[AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
-        if (status == AFNetworkReachabilityStatusReachableViaWiFi) {
-            // wifi网络环境
-            [_imageView sd_setImageWithURL:[NSURL URLWithString:topicItem.image1]];
-        }
-        if (status == AFNetworkReachabilityStatusReachableViaWWAN){
-            // 手机网络环境
-            UIImage *thumbImage = [imageCache imageFromDiskCacheForKey:topicItem.image0];
-            if (thumbImage) {
-                // 有小图缓存
-                _imageView.image = thumbImage;
-            } else {
-                // 没有小图缓存，下载小图
-                [_imageView sd_setImageWithURL:[NSURL URLWithString:topicItem.image0]];
-            }
-        }
-        // 断网，维持初始化时设置的图片
-    }
+    [_imageView jk_setImageWithOriginalImageURL:topicItem.image1 thumbnailImageURL:topicItem.image0];
     
     // 设置播放次数
     NSString *playcountStr;

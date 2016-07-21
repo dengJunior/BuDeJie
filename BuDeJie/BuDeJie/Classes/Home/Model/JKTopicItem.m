@@ -28,9 +28,10 @@
         CGFloat middleY = _cellHeight + JKMargin;
         CGFloat middleW = screenW - 2 *JKMargin;
         CGFloat middleH = middleW / self.width * self.height;
-        if (middleH > 520) {
-            _bigImageH = middleH;
-            middleH = 300;
+        // 如果是超长图
+        if (middleH > screenH) {
+            _longImage = YES;
+            middleH = screenH * 0.3;
         }
         _middleFrame = CGRectMake(middleX, middleY, middleW, middleH);
         
