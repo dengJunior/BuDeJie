@@ -1,12 +1,12 @@
 //
-//  JKAllTVC.m
+//  JKTopicTableViewController.m
 //  BuDeJie
 //
 //  Created by Joker on 16/7/14.
 //  Copyright © 2016年 Joker. All rights reserved.
 //
 
-#import "JKAllTVC.h"
+#import "JKTopicTableViewController.h"
 #import "JKTopicItem.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
@@ -17,7 +17,7 @@
 
 static NSString *const allCellID = @"allCellID";
 
-@interface JKAllTVC ()
+@interface JKTopicTableViewController ()
 
 /** 模型数组 */
 @property (nonatomic, strong) NSMutableArray <JKTopicItem *> *topicItems;
@@ -34,12 +34,9 @@ static NSString *const allCellID = @"allCellID";
 /** 下拉刷新label */
 @property (nonatomic, weak) UILabel *headerLabel;
 
-/** cell的类型 */
-@property (nonatomic, assign) JKTopicStyle type;
-
 @end
 
-@implementation JKAllTVC
+@implementation JKTopicTableViewController
 #pragma mark -
 #pragma mark 懒加载
 - (AFHTTPSessionManager *)manager {
@@ -131,8 +128,8 @@ static NSString *const allCellID = @"allCellID";
 #pragma mark 网络请求及数据处理
 /** 加载更多数据（上拉刷新） */
 - (void)loadMoreData {
-//    [self.manager invalidateSessionCancelingTasks:YES];
-//    self.manager = nil;
+    //    [self.manager invalidateSessionCancelingTasks:YES];
+    //    self.manager = nil;
     
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
@@ -167,11 +164,11 @@ static NSString *const allCellID = @"allCellID";
 }
 /** 加载新数据（下拉刷新） */
 - (void)loadNewData {
-//    [self.manager invalidateSessionCancelingTasks:YES];
+    //    [self.manager invalidateSessionCancelingTasks:YES];
     //    self.manager = nil;
     
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
-
+    
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
@@ -182,7 +179,7 @@ static NSString *const allCellID = @"allCellID";
         // 设置获取个多数据时的参数
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
-//        JKWriteResponseObjectToDesktopWithName(topic_topic)
+        //        JKWriteResponseObjectToDesktopWithName(topic_topic)
         NSMutableArray *topicItems = [JKTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         // 模型属性赋值
@@ -203,7 +200,7 @@ static NSString *const allCellID = @"allCellID";
         });
         
     }];
-
+    
 }
 #pragma mark -
 #pragma mark 处理数据刷新
@@ -321,7 +318,7 @@ static NSString *const allCellID = @"allCellID";
 }
 
 #pragma mark -
-#pragma mark TableView delegate 
+#pragma mark TableView delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return self.topicItems[indexPath.row].cellHeight;

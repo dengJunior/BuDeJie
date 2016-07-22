@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A3DEE0E84C4FDD2EA50C24A0 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */; };
-		F30C10A61D37D21200D79EE1 /* JKAllTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10A51D37D21200D79EE1 /* JKAllTVC.m */; };
-		F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10A81D37D23800D79EE1 /* JKVideoTVC.m */; };
-		F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */; };
-		F30C10AF1D37D28000D79EE1 /* JKImageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */; };
-		F30C10B21D37D2A400D79EE1 /* JKWordTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */; };
 		F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10DC1D39158800D79EE1 /* JKTitleButton.m */; };
 		F30C10E01D3A1B8200D79EE1 /* JKTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F30C10DF1D3A1B8200D79EE1 /* JKTopicItem.m */; };
 		F319130B1D3CEF4200A2295F /* JKConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F319130A1D3CEF4200A2295F /* JKConstant.m */; };
@@ -30,6 +25,12 @@
 		F3239EE81D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE11D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		F3239EE91D30F30E00F92A01 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE21D30F30E00F92A01 /* LaunchImage.png */; };
 		F3239EEA1D30F30E00F92A01 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */; };
+		F33175361D423E84003C23ED /* JKTopicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33175351D423E84003C23ED /* JKTopicTableViewController.m */; };
+		F33175391D424015003C23ED /* JKTopicAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33175381D424015003C23ED /* JKTopicAllViewController.m */; };
+		F331753C1D4241CB003C23ED /* JKTopicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F331753B1D4241CB003C23ED /* JKTopicVideoViewController.m */; };
+		F331753F1D42422A003C23ED /* JKTopicVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F331753E1D42422A003C23ED /* JKTopicVoiceViewController.m */; };
+		F33175421D424283003C23ED /* JKTopicPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33175411D424283003C23ED /* JKTopicPictureViewController.m */; };
+		F33175451D4242CB003C23ED /* JKTopicWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33175441D4242CB003C23ED /* JKTopicWordViewController.m */; };
 		F342522C1D2F8CE300355741 /* JKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522B1D2F8CE300355741 /* JKTabBar.m */; };
 		F342522F1D2FCD3800355741 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F342522E1D2FCD3800355741 /* UIView+JKFrame.m */; };
 		F34AEAD41D3F09E60091EC36 /* JKMiddleVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAD31D3F09E60091EC36 /* JKMiddleVideoView.m */; };
@@ -75,16 +76,6 @@
 		BCDAC0F33AE5C5BA75B0DFC6 /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		C2493B358F91B6D27657FDF1 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3AF2C526D702F346E8E541 /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
-		F30C10A41D37D21200D79EE1 /* JKAllTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAllTVC.h; sourceTree = "<group>"; };
-		F30C10A51D37D21200D79EE1 /* JKAllTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAllTVC.m; sourceTree = "<group>"; };
-		F30C10A71D37D23800D79EE1 /* JKVideoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKVideoTVC.h; sourceTree = "<group>"; };
-		F30C10A81D37D23800D79EE1 /* JKVideoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKVideoTVC.m; sourceTree = "<group>"; };
-		F30C10AA1D37D25E00D79EE1 /* JKVoiceTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKVoiceTVC.h; sourceTree = "<group>"; };
-		F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKVoiceTVC.m; sourceTree = "<group>"; };
-		F30C10AD1D37D28000D79EE1 /* JKImageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKImageTVC.h; sourceTree = "<group>"; };
-		F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKImageTVC.m; sourceTree = "<group>"; };
-		F30C10B01D37D2A400D79EE1 /* JKWordTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKWordTVC.h; sourceTree = "<group>"; };
-		F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKWordTVC.m; sourceTree = "<group>"; };
 		F30C10DB1D39158800D79EE1 /* JKTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTitleButton.h; sourceTree = "<group>"; };
 		F30C10DC1D39158800D79EE1 /* JKTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTitleButton.m; sourceTree = "<group>"; };
 		F30C10DE1D3A1B8200D79EE1 /* JKTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicItem.h; sourceTree = "<group>"; };
@@ -110,6 +101,18 @@
 		F3239EE11D30F30E00F92A01 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		F3239EE21D30F30E00F92A01 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F3239EE31D30F30E00F92A01 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		F33175341D423E84003C23ED /* JKTopicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicTableViewController.h; sourceTree = "<group>"; };
+		F33175351D423E84003C23ED /* JKTopicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicTableViewController.m; sourceTree = "<group>"; };
+		F33175371D424015003C23ED /* JKTopicAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicAllViewController.h; sourceTree = "<group>"; };
+		F33175381D424015003C23ED /* JKTopicAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicAllViewController.m; sourceTree = "<group>"; };
+		F331753A1D4241CB003C23ED /* JKTopicVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicVideoViewController.h; sourceTree = "<group>"; };
+		F331753B1D4241CB003C23ED /* JKTopicVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicVideoViewController.m; sourceTree = "<group>"; };
+		F331753D1D42422A003C23ED /* JKTopicVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicVoiceViewController.h; sourceTree = "<group>"; };
+		F331753E1D42422A003C23ED /* JKTopicVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicVoiceViewController.m; sourceTree = "<group>"; };
+		F33175401D424283003C23ED /* JKTopicPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicPictureViewController.h; sourceTree = "<group>"; };
+		F33175411D424283003C23ED /* JKTopicPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicPictureViewController.m; sourceTree = "<group>"; };
+		F33175431D4242CB003C23ED /* JKTopicWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTopicWordViewController.h; sourceTree = "<group>"; };
+		F33175441D4242CB003C23ED /* JKTopicWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTopicWordViewController.m; sourceTree = "<group>"; };
 		F342522A1D2F8CE300355741 /* JKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTabBar.h; sourceTree = "<group>"; };
 		F342522B1D2F8CE300355741 /* JKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTabBar.m; sourceTree = "<group>"; };
 		F342522D1D2FCD3800355741 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKFrame.h"; sourceTree = "<group>"; };
@@ -405,16 +408,18 @@
 			children = (
 				F3C9FEDB1D2E80E1004BF32E /* JKHomeVC.h */,
 				F3C9FEDC1D2E80E1004BF32E /* JKHomeVC.m */,
-				F30C10A41D37D21200D79EE1 /* JKAllTVC.h */,
-				F30C10A51D37D21200D79EE1 /* JKAllTVC.m */,
-				F30C10A71D37D23800D79EE1 /* JKVideoTVC.h */,
-				F30C10A81D37D23800D79EE1 /* JKVideoTVC.m */,
-				F30C10AA1D37D25E00D79EE1 /* JKVoiceTVC.h */,
-				F30C10AB1D37D25E00D79EE1 /* JKVoiceTVC.m */,
-				F30C10AD1D37D28000D79EE1 /* JKImageTVC.h */,
-				F30C10AE1D37D28000D79EE1 /* JKImageTVC.m */,
-				F30C10B01D37D2A400D79EE1 /* JKWordTVC.h */,
-				F30C10B11D37D2A400D79EE1 /* JKWordTVC.m */,
+				F33175341D423E84003C23ED /* JKTopicTableViewController.h */,
+				F33175351D423E84003C23ED /* JKTopicTableViewController.m */,
+				F33175371D424015003C23ED /* JKTopicAllViewController.h */,
+				F33175381D424015003C23ED /* JKTopicAllViewController.m */,
+				F331753A1D4241CB003C23ED /* JKTopicVideoViewController.h */,
+				F331753B1D4241CB003C23ED /* JKTopicVideoViewController.m */,
+				F331753D1D42422A003C23ED /* JKTopicVoiceViewController.h */,
+				F331753E1D42422A003C23ED /* JKTopicVoiceViewController.m */,
+				F33175401D424283003C23ED /* JKTopicPictureViewController.h */,
+				F33175411D424283003C23ED /* JKTopicPictureViewController.m */,
+				F33175431D4242CB003C23ED /* JKTopicWordViewController.h */,
+				F33175441D4242CB003C23ED /* JKTopicWordViewController.m */,
 				F34BDB041D40FD12008B573B /* JKBigPictureViewController.h */,
 				F34BDB051D40FD12008B573B /* JKBigPictureViewController.m */,
 				F34BDB061D40FD12008B573B /* JKBigPictureViewController.xib */,
@@ -774,6 +779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C9FEAC1D2E709A004BF32E /* AppDelegate.m in Sources */,
+				F33175421D424283003C23ED /* JKTopicPictureViewController.m in Sources */,
 				F3BEBAC81D35238D005405B9 /* JKSubTagItem.m in Sources */,
 				F3C9FEE61D2E8174004BF32E /* JKFriendTrendVC.m in Sources */,
 				F34AEAD41D3F09E60091EC36 /* JKMiddleVideoView.m in Sources */,
@@ -781,19 +787,18 @@
 				F3239EDA1D30EFC000F92A01 /* JKAdVC.m in Sources */,
 				F3BEBAD11D35E3C0005405B9 /* JKLoginVC.m in Sources */,
 				F3BEBAC51D351F4D005405B9 /* JKSubTagTVC.m in Sources */,
+				F331753C1D4241CB003C23ED /* JKTopicVideoViewController.m in Sources */,
 				F3239EC51D30A11C00F92A01 /* UIBarButtonItem+JKItem.m in Sources */,
 				F34BDB071D40FD12008B573B /* JKBigPictureViewController.m in Sources */,
 				F319130B1D3CEF4200A2295F /* JKConstant.m in Sources */,
 				F3BEBAE41D3631E6005405B9 /* JKLoginTextField.m in Sources */,
-				F30C10AC1D37D25E00D79EE1 /* JKVoiceTVC.m in Sources */,
 				F3BEBAF21D3640BD005405B9 /* JKThirdLoginBtn.m in Sources */,
-				F30C10B21D37D2A400D79EE1 /* JKWordTVC.m in Sources */,
+				F33175361D423E84003C23ED /* JKTopicTableViewController.m in Sources */,
 				F3C9FEE91D2E818A004BF32E /* JKMeTVC.m in Sources */,
 				F3C9FEA91D2E709A004BF32E /* main.m in Sources */,
 				F3C9FEE01D2E8107004BF32E /* JKNewVC.m in Sources */,
 				F3BEBB021D367290005405B9 /* JKSquareCell.m in Sources */,
 				F3C9FEF31D2E8F31004BF32E /* UIImage+JKRendering.m in Sources */,
-				F30C10AF1D37D28000D79EE1 /* JKImageTVC.m in Sources */,
 				F3C9FEE31D2E813C004BF32E /* JKPublishVC.m in Sources */,
 				F3BEBAEA1D363355005405B9 /* JKFastLoginView.m in Sources */,
 				F3C9FEDA1D2E806A004BF32E /* JKTabBarC.m in Sources */,
@@ -803,15 +808,16 @@
 				F34BDB031D40ECBC008B573B /* UIImageView+JKDownload.m in Sources */,
 				F3239ECB1D30D8D000F92A01 /* JKNavigationController.m in Sources */,
 				F31913141D3D0F5C00A2295F /* JKTopicCell.m in Sources */,
+				F33175451D4242CB003C23ED /* JKTopicWordViewController.m in Sources */,
+				F331753F1D42422A003C23ED /* JKTopicVoiceViewController.m in Sources */,
 				F3BEBAC21D35142A005405B9 /* JKADItem.m in Sources */,
 				F3C9FEDD1D2E80E1004BF32E /* JKHomeVC.m in Sources */,
-				F30C10A91D37D23800D79EE1 /* JKVideoTVC.m in Sources */,
 				F3BEBACC1D3523CB005405B9 /* JKSubTagCell.m in Sources */,
 				F34AEAD91D3F0DC50091EC36 /* JKMiddlePictureView.m in Sources */,
 				F30C10E01D3A1B8200D79EE1 /* JKTopicItem.m in Sources */,
+				F33175391D424015003C23ED /* JKTopicAllViewController.m in Sources */,
 				F359D9161D3E46A4001146C5 /* JKMiddleVoiceView.m in Sources */,
 				F30C10DD1D39158800D79EE1 /* JKTitleButton.m in Sources */,
-				F30C10A61D37D21200D79EE1 /* JKAllTVC.m in Sources */,
 				F3BEBAF91D365A91005405B9 /* JKSquareItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

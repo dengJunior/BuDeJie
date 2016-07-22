@@ -9,6 +9,7 @@
 #import "JKBigPictureViewController.h"
 #import "JKTopicItem.h"
 #import <UIImageView+WebCache.h>
+#import <Photos/Photos.h>
 
 @interface JKBigPictureViewController ()<UIScrollViewDelegate>
 
@@ -111,6 +112,7 @@
 }
 
 - (IBAction)savePicture {
+    
 }
 
 

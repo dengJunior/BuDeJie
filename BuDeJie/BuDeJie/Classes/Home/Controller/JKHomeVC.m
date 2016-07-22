@@ -9,11 +9,11 @@
 #import "JKHomeVC.h"
 #import "JKTitleButton.h"
 
-#import "JKAllTVC.h"
-#import "JKVideoTVC.h"
-#import "JKVoiceTVC.h"
-#import "JKImageTVC.h"
-#import "JKWordTVC.h"
+#import "JKTopicAllViewController.h"
+#import "JKTopicVideoViewController.h"
+#import "JKTopicVoiceViewController.h"
+#import "JKTopicPictureViewController.h"
+#import "JKTopicWordViewController.h"
 
 @interface JKHomeVC ()<UIScrollViewDelegate>
 
@@ -66,11 +66,11 @@
 /** 初始化子控制器 */
 - (void)setupChildVCs {
     
-    [self addChildViewController:[[JKAllTVC alloc] init]];
-    [self addChildViewController:[[JKVideoTVC alloc] init]];
-    [self addChildViewController:[[JKVoiceTVC alloc] init]];
-    [self addChildViewController:[[JKImageTVC alloc] init]];
-    [self addChildViewController:[[JKWordTVC alloc] init]];
+    [self addChildViewController:[[JKTopicAllViewController alloc] init]];
+    [self addChildViewController:[[JKTopicVideoViewController alloc] init]];
+    [self addChildViewController:[[JKTopicVoiceViewController alloc] init]];
+    [self addChildViewController:[[JKTopicPictureViewController alloc] init]];
+    [self addChildViewController:[[JKTopicWordViewController alloc] init]];
 }
 
 /** 初始化子控件 */
