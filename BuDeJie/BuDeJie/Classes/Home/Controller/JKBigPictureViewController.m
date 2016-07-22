@@ -40,12 +40,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.scrollView.delegate = self;
+    // 添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goBack)];
+    [self.scrollView addGestureRecognizer:tap];
     
+    // 图片控件
     UIImageView *imageView = [[UIImageView alloc] init];
-    
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topicItem.image1] placeholderImage:nil options:kNilOptions progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        // 显示进度条
         self.progressView.hidden = NO;
+        // 设置进度
         _progressView.progress = 1.0 * receivedSize / expectedSize;
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -53,6 +57,7 @@
             // 图片下载完成，保存按钮可点
             self.saveButton.enabled = YES;
         }
+        // 隐藏进度条
         self.progressView.hidden = YES;
     }];
     imageView.x = 0;
@@ -77,6 +82,7 @@
     } else {
         self.scrollView.minimumZoomScale = scale;
     }
+    self.scrollView.delegate = self;
 }
 
 #pragma mark -

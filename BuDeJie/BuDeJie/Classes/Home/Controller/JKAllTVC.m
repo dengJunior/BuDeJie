@@ -11,6 +11,7 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
+#import <SDImageCache.h>
 
 #import "JKTopicCell.h"
 
@@ -282,6 +283,8 @@ static NSString *const allCellID = @"allCellID";
     [self dealHeader];
     [self dealFooter];
     
+    // 清除缓存
+    [[SDImageCache sharedImageCache] clearMemory];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {

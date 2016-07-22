@@ -19,7 +19,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UVF-jb-8Be">
                     <rect key="frame" x="0.0" y="0.0" width="332" height="188"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-fD-cCC">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-fD-cCC">
                     <rect key="frame" x="0.0" y="145" width="332" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="bov-ZI-xhq"/>
@@ -59,7 +59,7 @@
                 <outlet property="imageView" destination="UVF-jb-8Be" id="pf6-kJ-jtL"/>
                 <outlet property="seeBigButton" destination="Ts0-fD-cCC" id="YBe-RQ-0fa"/>
             </connections>
-            <point key="canvasLocation" x="506" y="355"/>
+            <point key="canvasLocation" x="75" y="235"/>
         </view>
     </objects>
     <resources>
