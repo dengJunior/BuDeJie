@@ -15,7 +15,7 @@
 
 #import "JKTopicCell.h"
 
-static NSString *const allCellID = @"allCellID";
+static NSString *const topicCellID = @"topicCellID";
 
 @interface JKTopicTableViewController ()
 
@@ -55,12 +55,12 @@ static NSString *const allCellID = @"allCellID";
     [super viewDidLoad];
     
     // 估计高度
-    self.tableView.estimatedRowHeight = 200;
+//    self.tableView.estimatedRowHeight = 600;
     // 取消系统的分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // 注册cell
-    [self.tableView registerNib:[UINib nibWithNibName:@"JKTopicCell" bundle:nil] forCellReuseIdentifier:allCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"JKTopicCell" bundle:nil] forCellReuseIdentifier:topicCellID];
     
     // 设置内容和滚动条的内边距
     self.tableView.contentInset = UIEdgeInsetsMake(titleMaxY, 0, tabBarHeight, 0);
@@ -125,7 +125,7 @@ static NSString *const allCellID = @"allCellID";
 
 
 #pragma mark -
-#pragma mark 网络请求及数据处理
+#pragma mark 网络请求
 /** 加载更多数据（上拉刷新） */
 - (void)loadMoreData {
     //    [self.manager invalidateSessionCancelingTasks:YES];
@@ -184,8 +184,10 @@ static NSString *const allCellID = @"allCellID";
         
         // 模型属性赋值
         _topicItems = topicItems;
+        
         // 刷新
         [self.tableView reloadData];
+
         // 下拉刷新完成
         [self headerEndRefreshing];
         
@@ -242,6 +244,10 @@ static NSString *const allCellID = @"allCellID";
         UIEdgeInsets insets = self.tableView.contentInset;
         insets.top = titleMaxY;
         self.tableView.contentInset = insets;
+        
+        CGPoint offset = self.tableView.contentOffset;
+        offset.y = - insets.top;
+        self.tableView.contentOffset = offset;
     }];
     self.headerLabel.text = @"下拉刷新数据";
     self.headerLabel.backgroundColor = [UIColor redColor];
@@ -307,7 +313,7 @@ static NSString *const allCellID = @"allCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    JKTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:allCellID];
+    JKTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:topicCellID];
     
     JKTopicItem *topicItem = self.topicItems[indexPath.row];
     
@@ -323,6 +329,5 @@ static NSString *const allCellID = @"allCellID";
     
     return self.topicItems[indexPath.row].cellHeight;
 }
-
 
 @end
