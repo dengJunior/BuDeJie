@@ -10,6 +10,7 @@
 #import "JKTopicItem.h"
 #import <UIImageView+WebCache.h>
 #import <Photos/Photos.h>
+#import <SVProgressHUD.h>
 
 @interface JKBigPictureViewController ()<UIScrollViewDelegate>
 
@@ -112,8 +113,82 @@
 }
 
 - (IBAction)savePicture {
+//    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    
+    // 1. 将照片保存进[Camera Roll]相册
+    // 因为后面还要将这张图片“引用”到自定义相册中，所以要拿到[Camera Roll]中这张图片的Id
+    __block NSString *createdAssetId = nil;
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        // creationRequest...方法必须在performChanges...的block内调用
+        createdAssetId = [PHAssetChangeRequest creationRequestForAssetFromImage:self.imageView.image].placeholderForCreatedAsset.localIdentifier;
+    } error:nil];
+    
+    // 1.2 获取刚保存进[Camera Roll]的这张图片
+    PHFetchResult *asset = [PHAsset fetchAssetsWithLocalIdentifiers:@[createdAssetId] options:nil];
+    
+    // 2. 创建\获取 以应用名命名的自定义相册
+    // 2.1 获取应用名
+    NSString *title = [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey];
+    
+    // 本应用的[自定义相册]
+    PHAssetCollection *assetCollection = nil;
+    
+    // 2.2 获得所有的自定义相册
+    PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    // 2.3 遍历->找到本应用的自定义相册
+    for (PHAssetCollection *collection in result) {
+        if ([collection.localizedTitle isEqualToString:title]) {
+            assetCollection = collection;
+            break;
+        }
+    }
+    
+    // 2.4如果之前没有创建本应用的自定义相册
+    // 自定义相册的Id
+    __block NSString *assetCollectionId = nil;
+    if (!assetCollection) {
+        // 创建自定义相册
+        [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+            assetCollectionId = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:title].placeholderForCreatedAssetCollection.localIdentifier;
+        } error:nil];
+        
+        // 2.5 获取自定义相册
+        assetCollection = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[assetCollectionId] options:nil].firstObject;
+    }
+    
+    // 3 将图片引用到自定义相册中
+    NSError *error = nil;
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        [[PHAssetCollectionChangeRequest changeRequestForAssetCollection:assetCollection] insertAssets:asset atIndexes:[NSIndexSet indexSetWithIndex:0]];
+    } error:&error];
+    if (error) {
+        JKLog(@"failed")
+    } else {
+        JKLog(@"successed")
+    }
     
 }
+
+/*
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (error) {
+        [SVProgressHUD showSuccessWithStatus:@"failed"];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"successed"];
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end
