@@ -112,9 +112,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)savePicture {
-//    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-    
+- (PHFetchResult *)createdAsset {
     // 1. 将照片保存进[Camera Roll]相册
     // 因为后面还要将这张图片“引用”到自定义相册中，所以要拿到[Camera Roll]中这张图片的Id
     __block NSString *createdAssetId = nil;
@@ -124,8 +122,10 @@
     } error:nil];
     
     // 1.2 获取刚保存进[Camera Roll]的这张图片
-    PHFetchResult *asset = [PHAsset fetchAssetsWithLocalIdentifiers:@[createdAssetId] options:nil];
-    
+    return [PHAsset fetchAssetsWithLocalIdentifiers:@[createdAssetId] options:nil];
+}
+
+- (PHAssetCollection *) createdAssetCollection {
     // 2. 创建\获取 以应用名命名的自定义相册
     // 2.1 获取应用名
     NSString *title = [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey];
@@ -137,10 +137,7 @@
     PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     // 2.3 遍历->找到本应用的自定义相册
     for (PHAssetCollection *collection in result) {
-        if ([collection.localizedTitle isEqualToString:title]) {
-            assetCollection = collection;
-            break;
-        }
+        if ([collection.localizedTitle isEqualToString:title]) return collection;
     }
     
     // 2.4如果之前没有创建本应用的自定义相册
@@ -155,17 +152,86 @@
         // 2.5 获取自定义相册
         assetCollection = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[assetCollectionId] options:nil].firstObject;
     }
+    return assetCollection;
+}
+
+- (void)saveImageIntoAlbum {
+    // 1. 将照片保存进[Camera Roll]相册
+    PHFetchResult *createdAsset = self.createdAsset;
+    
+    // 2. 创建\获取 以应用名命名的自定义相册
+    PHAssetCollection *createdCollection = self.createdAssetCollection;
     
     // 3 将图片引用到自定义相册中
     NSError *error = nil;
     [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
-        [[PHAssetCollectionChangeRequest changeRequestForAssetCollection:assetCollection] insertAssets:asset atIndexes:[NSIndexSet indexSetWithIndex:0]];
+        [[PHAssetCollectionChangeRequest changeRequestForAssetCollection:createdCollection] insertAssets:createdAsset atIndexes:[NSIndexSet indexSetWithIndex:0]];
     } error:&error];
+    
     if (error) {
-        JKLog(@"failed")
+        [SVProgressHUD showSuccessWithStatus:@"failed"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
     } else {
-        JKLog(@"successed")
+        [SVProgressHUD showSuccessWithStatus:@"successed"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
     }
+}
+
+- (IBAction)savePicture {
+    // 先前的授权状态
+    PHAuthorizationStatus previousStatus = [PHPhotoLibrary authorizationStatus];
+    /*
+     PHAuthorizationStatusNotDetermined = 0,
+     PHAuthorizationStatusRestricted,
+     PHAuthorizationStatusDenied,
+     PHAuthorizationStatusAuthorized
+     */
+    
+    /**
+     *  1>如果是应用安装后第一次保存，授权状态为PHAuthorizationStatusNotDetermined
+          这个方法会弹出授权框，提示用户决定是否授权，并将用户的授权结果传进block
+     *  2>如果不是第一次，这个方法会直接取得此时的授权结果，传给block，而不会弹窗
+     *
+     *  注意：这个方法的block是在子线程中执行的
+     */
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        // 子线程中执行
+//        JKLog(@"%@", [NSThread currentThread])
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            switch (status) {
+                case PHAuthorizationStatusDenied: {
+                    if (previousStatus == PHAuthorizationStatusNotDetermined) return;
+                    
+                    [SVProgressHUD showErrorWithStatus:@"请开启授权"];
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [SVProgressHUD dismiss];
+                    });
+                    break;
+                }
+                    
+                case PHAuthorizationStatusAuthorized: {
+                    [self saveImageIntoAlbum];
+                    break;
+                }
+                    
+                case PHAuthorizationStatusRestricted: {
+                    [SVProgressHUD showErrorWithStatus:@"系统限制导致无法保存"];
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [SVProgressHUD dismiss];
+                    });
+                    break;
+                }
+                    
+                default:
+                    break;
+            }
+        });
+    }];
     
 }
 
